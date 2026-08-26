@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pizzería La Clásica — pizza artesanal, tradición italiana y alma salvadoreña." />
+    <meta name="theme-color" content="#B52820" />
+    <meta property="og:title" content="Pizzería La Clásica | El arte de hacer pizza" />
+    <meta property="og:description" content="Pizza artesanal, ingredientes seleccionados y tradición italiana con alma salvadoreña." />
+    <title>Pizzería La Clásica | El arte de hacer pizza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    <header class="site-header" id="top">
+      <a href="#top" class="brand official-logo" aria-label="Pizzería La Clásica, inicio"><img src="assets/logo-la-clasica.png" alt="La Clásica" /></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><span class="sr-only">Abrir menú</span></button>
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <a href="#menu">Menú</a><a href="#historia">Nosotros</a><a href="#estilos">Estilos</a><a href="#sucursales">Sucursales</a><a href="#contacto">Contacto</a>
+      </nav>
+      <a class="btn btn-primary header-cta whatsapp-link" data-message="Hola, quiero ordenar en Pizzería La Clásica.">Ordenar <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content reveal">
+          <p class="eyebrow">Pizzería artesanal · El Salvador</p>
+          <h1 id="hero-title">El arte de<br /><em>hacer pizza.</em></h1>
+          <p class="hero-copy">Ingredientes seleccionados, fuego y tradición italiana con alma salvadoreña.</p>
+          <div class="hero-actions"><a class="btn btn-dark" href="#menu">Ver menú</a><a class="text-link whatsapp-link" data-message="Hola, quiero ordenar en Pizzería La Clásica.">Ordenar ahora <span>→</span></a></div>
+        </div>
+        <figure class="hero-image image-placeholder tilt-card" aria-label="Pizza artesanal de La Clásica">
+          <img src="assets/catalogo/catalogo-01-00.jpg" alt="Selección de pizzas de La Clásica" fetchpriority="high" />
+          <figcaption>IMAGEN DEL CATÁLOGO · LA CLÁSICA</figcaption>
+        </figure>
+        <div class="award-stamp" aria-label="Reconocimiento: puesto 5 en 50 Top Pizza Latin America 2026"><strong>#5</strong><span>50 Top Pizza<br />Latin America<br />2026</span></div>
+        <span class="flour flour-one" aria-hidden="true"></span><span class="flour flour-two" aria-hidden="true"></span>
+      </section>
+
+      <section class="recognition section-pad" aria-labelledby="recognition-title">
+        <div class="recognition-number" aria-hidden="true">5</div>
+        <div class="recognition-copy reveal"><p class="eyebrow">Reconocimientos</p><h2 id="recognition-title">Entre las<br /><em>mejores.</em></h2><p>Celebramos el sabor, la técnica y el trabajo de un equipo que lleva El Salvador a la mesa de Latinoamérica.</p></div>
+        <div class="recognition-detail reveal">
+          <figure class="recognition-awards-img"><img src="assets/premios-la-clasica.png" alt="Premios: Top Pizzería en El Salvador 2026 · 50 Top Pizza Latin America 2026 5° lugar · The Best Pizza Milan 2026" loading="lazy" /></figure>
+          <hr /><p class="kicker">JUAN CÁRCAMO</p><h3>Pizza Maker<br />of the Year · 2026</h3>
+        </div>
+      </section>
+
+      <section class="story section-pad" id="historia" aria-labelledby="story-title">
+        <figure class="story-image image-placeholder reveal"><img src="assets/interior-garden.jpeg" alt="Interior de Pizzería La Clásica con vegetación y manteles a cuadros" loading="lazy" /><figcaption>FOTOGRAFÍA PROPORCIONADA · LA CLÁSICA</figcaption></figure>
+        <div class="story-copy reveal"><p class="eyebrow">Nuestra historia</p><h2 id="story-title">De un horno en casa a las mejores de Latinoamérica.</h2><p>La Clásica nació en 2014, cuando Juan Cárcamo construyó un horno de leña para preparar pizza para su familia. Hoy, la misma curiosidad por la masa, el fuego y los buenos ingredientes guía cada servicio.</p><a class="text-link" href="#fundador">Conoce a Juan <span>→</span></a></div>
+      </section>
+
+      <section class="timeline" aria-label="Historia de La Clásica"><div><b>2014</b><span>Un horno en casa</span></div><div><b>Primeros pedidos</b><span>La pizza empieza a viajar</span></div><div><b>Expansión</b><span>Nuevas mesas, nuevo fuego</span></div><div><b>2026</b><span>#5 de Latinoamérica</span></div></section>
+
+      <section class="styles section-pad" id="estilos" aria-labelledby="styles-title">
+        <div class="section-intro reveal"><p class="eyebrow">Hechas a su manera</p><h2 id="styles-title">Cada pizza tiene<br /><em>su propia historia.</em></h2></div>
+        <div class="style-scroller">
+          <article class="style-card napo reveal"><span>01</span><h3>Napolitana</h3><p>Suave, elástica y marcada por el fuego.</p><a href="#menu">Explorar <span>→</span></a></article>
+          <article class="style-card romana reveal"><span>02</span><h3>Romana</h3><p>Ligera, crujiente y generosa.</p><a href="#menu">Explorar <span>→</span></a></article>
+          <article class="style-card detroit reveal"><span>03</span><h3>Detroit</h3><p>Rectangular, de bordes caramelizados.</p><a href="#menu">Explorar <span>→</span></a></article>
+          <article class="style-card chicago reveal"><span>04</span><h3>Chicago</h3><p>Fina, intensa y con carácter.</p><a href="#menu">Explorar <span>→</span></a></article>
+        </div>
+      </section>
+
+      <section class="ingredients section-pad" aria-labelledby="ingredients-title">
+        <div class="ingredients-title reveal"><p class="eyebrow">El origen importa</p><h2 id="ingredients-title">Lo que hay detrás<br />de la pizza.</h2></div>
+        <div class="ingredient-grid"><article><span>01</span><h3>Harina</h3><p>Tiempo, paciencia y una masa que habla por sí misma.</p></article><article><span>02</span><h3>Tomate</h3><p>El punto de partida para una salsa franca y luminosa.</p></article><article><span>03</span><h3>Mozzarella</h3><p>Equilibrio, cremosidad y el gesto exacto.</p></article><article><span>04</span><h3>Albahaca</h3><p>Un acento fresco para terminar cada historia.</p></article></div>
+      </section>
+
+      <section class="oven" aria-labelledby="oven-title"><figure class="image-placeholder"><img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=1800&q=85" alt="Pizza saliendo de un horno" loading="lazy" /><figcaption>IMAGEN DE REEMPLAZO · Horno de La Clásica</figcaption></figure><div class="oven-overlay"><p class="eyebrow">El corazón de la cocina</p><h2 id="oven-title">El fuego es parte<br /><em>de la receta.</em></h2></div></section>
+
+      <section class="menu section-pad" id="menu" aria-labelledby="menu-title">
+        <div class="menu-heading reveal"><p class="eyebrow">La carta</p><h2 id="menu-title">Pizza, sin<br /><em>apresurarse.</em></h2><p>Elige tu favorita. Cada pedido abre una conversación directa por WhatsApp.</p></div>
+        <nav class="menu-tabs" aria-label="Categorías de menú"><button class="active" data-tab="pizzas">Pizzas</button><button data-tab="mas-alla">Más allá de la pizza</button><button data-tab="calzones">Calzones</button><button data-tab="especiales">Pizzas Especiales</button><button data-tab="gelato">Gelato</button></nav>
+        <div class="menu-layout" id="pizzas">
+          <div class="featured-menu image-placeholder reveal"><img src="assets/margherita.jpg" alt="Pizza Margherita" loading="lazy" /><div><p class="kicker">La favorita de siempre · Desde $10</p><h3>Margherita</h3><p>Tomate San Marzano D.O.P., mozzarella, albahaca y aceite de oliva.</p><button class="text-link order-product" data-product="Pizza Margherita">Pedir esta pizza <span>→</span></button></div></div>
+          <div class="product-list" aria-label="Pizzas destacadas">
+            <article class="product reveal"><div><p class="kicker">Tonda Romana</p><h3>Marinara</h3><p>Tomate San Marzano D.O.P., ajo, orégano y aceite de oliva.</p></div><div class="product-action"><strong>$11</strong><button class="order-product" data-product="Pizza Marinara" aria-label="Pedir Pizza Marinara por WhatsApp">↗</button></div></article>
+            <article class="product reveal"><div><p class="kicker">Clásica</p><h3>Pepperoni</h3><p>Pepperoni, mozzarella y salsa de tomate.</p></div><div class="product-action"><strong>Desde $9</strong><button class="order-product" data-product="Pizza Pepperoni" aria-label="Pedir Pizza Pepperoni por WhatsApp">↗</button></div></article>
+            <article class="product reveal"><div><p class="kicker">Especial</p><h3>Pizza Amore</h3><p>Camarones, cangrejo, loroco, mozzarella y salsa de tomate.</p></div><div class="product-action"><strong>Desde $12</strong><button class="order-product" data-product="Pizza Amore" aria-label="Pedir Pizza Amore por WhatsApp">↗</button></div></article>
+            <article class="product reveal"><div><p class="kicker">Detroit</p><h3>Detroit Deluxe</h3><p>Jamón, pepperoni, salchicha italiana, salami, chorizo y salsa.</p></div><div class="product-action"><strong>$20</strong><button class="order-product" data-product="Pizza Detroit Deluxe" aria-label="Pedir Pizza Detroit Deluxe por WhatsApp">↗</button></div></article>
+            <article class="product reveal"><div><p class="kicker">Chicago</p><h3>Chicago Clásica</h3><p>Pepperoni, chile verde, cebolla, mozzarella y salsa de tomate.</p></div><div class="product-action"><strong>$30</strong><button class="order-product" data-product="Pizza Chicago Clásica" aria-label="Pedir Pizza Chicago Clásica por WhatsApp">↗</button></div></article>
+          </div>
+        </div>
+
+        <div class="menu-layout" id="mas-alla" hidden>
+          <div class="featured-menu image-placeholder reveal"><img src="assets/ENSALADA.jpg" alt="Más allá de la pizza - Ensaladas y platos italianos" loading="lazy" /><div><p class="kicker">Ingredientes selectos</p><h3>Más allá<br/>de la pizza</h3><p>Uno de los grandes tesoros de la gastronomía italiana: LA BURRATA con un corazón cremoso de Stracciatella, importada directamente desde Nápoles Italia para disfrutar su auténtico sabor.</p></div></div>
+          <div class="product-list" aria-label="Más allá de la pizza">
+            <article class="product reveal"><div><p class="kicker">Ensaladas</p><h3>Mediterránea</h3><p>Burrata de Nápoles, prosciutto, arúgula, tomate cherry, crema balsámica de Módena IGP., albahaca, aceite de oliva y crutones romanos.</p></div><div class="product-action"><strong>$14</strong><button class="order-product" data-product="Ensalada Mediterránea" aria-label="Pedir Ensalada Mediterránea por WhatsApp">↗</button></div></article>
+            <article class="product reveal"><div><p class="kicker">Ensaladas</p><h3>Caprese & Burrata</h3><p>Burrata de Nápoles, tomate, albahaca fresca, crema balsámica de Módena IGP. y aceite de oliva.</p></div><div class="product-action"><strong>$9</strong><button class="order-product" data-product="Ensalada Caprese & Burrata" aria-label="Pedir Ensalada Caprese & Burrata por WhatsApp">↗</button></div></article>
+            <article class="product reveal"><div><p class="kicker">Ensaladas</p><h3>Stracciatella Caprese</h3><p>Queso Stracciatella de Nápoles, tomate cherry confitado con orégano y ajo. Adornamos con albahaca fresca y acompañamos con pan de la casa.</p></div><div class="product-action"><strong>$12</strong><button class="order-product" data-product="Ensalada Stracciatella Caprese" aria-label="Pedir Ensalada Stracciatella Caprese por WhatsApp">↗</button></div></article>
+            <article class="product reveal"><div><p class="kicker">La mesa italiana</p><h3>Stromboli</h3><p>Enrollado de jamón, pepperoni, chile verde, cebolla morada y queso fiordilatte, acompañado de salsa de tomate de la casa.</p></div><div class="product-action"><strong>$8</strong><button class="order-product" data-product="Stromboli" aria-label="Pedir Stromboli por WhatsApp">↗</button></div></article>
+            <article class="product reveal"><div><p class="kicker">La mesa italiana</p><h3>Albóndigas Italianas</h3><p>Dos albóndigas estilo italiano bañadas en su salsa de tomate San Marzano DOP, queso parmesano, albahaca y acompañamos con pan de la casa.</p></div><div class="product-action"><strong>$6</strong><button class="order-product" data-product="Albóndigas Italianas" aria-label="Pedir Albóndigas Italianas por WhatsApp">↗</button></div></article>
+            <article class="product reveal"><div><p class="kicker">La mesa italiana</p><h3>Spaghetti & Albóndigas</h3><p>Spaghetti y dos albóndigas italianas bañadas en su salsa de tomate San Marzano DOP, queso parmesano, albahaca, y acompañamos con pan de la casa.</p></div><div class="product-action"><strong>$10</strong><button class="order-product" data-product="Spaghetti & Albóndigas" aria-label="Pedir Spaghetti & Albóndigas por WhatsApp">↗</button></div></article>
+            <article class="product reveal"><div><p class="kicker">La mesa italiana</p><h3>Lasagna de Carne</h3><p>Rellena de carne de res, salchicha italiana, tres quesos (Ricotta, fiordilatte, parmesano), salsa de tomate San Marzano DOP, acompañamos con pan de la casa.</p></div><div class="product-action"><strong>$10</strong><button class="order-product" data-product="Lasagna de Carne" aria-label="Pedir Lasagna de Carne por WhatsApp">↗</button></div></article>
+            <article class="product reveal"><div><p class="kicker">La mesa italiana</p><h3>Penne San Marzano</h3><p>Pasta Penne con salsa de tomate San Marzano DOP, gratinado con queso fiordilatte y parmesano.</p></div><div class="product-action"><strong>$10</strong><button class="order-product" data-product="Penne San Marzano" aria-label="Pedir Penne San Marzano por WhatsApp">↗</button></div></article>
+          </div>
+        </div>
+
+        <div class="menu-layout" id="especiales" hidden>
+          <div style="display:flex; flex-direction:column; gap:4rem;">
+            <div class="reveal">
+              <p class="kicker" style="color:#665e55;">Especialidades del mundo</p>
+              <h3 style="font: 600 64px/.8 var(--serif); margin:0 0 1.5rem;">Pizzas<br/>Únicas</h3>
+              <img src="assets/deep dish.jpg" alt="Deep Dish Pizza" loading="lazy" style="width:100%; border-radius:4px; box-shadow:0 4px 18px rgba(0,0,0,0.15);" />
+            </div>
+            <div class="reveal">
+              <img src="assets/FUGAZZETA.jpg" alt="La Fugazzeta" loading="lazy" style="width:100%; border-radius:4px; box-shadow:0 4px 18px rgba(0,0,0,0.15);" />
+            </div>
+          </div>
+          <div class="product-list" aria-label="Pizzas Especiales">
+            <div style="margin-bottom: 4rem; padding-top: 6rem;">
+              <article class="product reveal"><div><p class="kicker">Deep Dish Pizza · USA (8 porciones)</p><h3>Clásica</h3><p>Masa profunda estilo tazón, rellena de capas masivas de queso, pepperoni, chile verde, cebolla y cubierta con salsa de tomate.</p></div><div class="product-action"><strong>$30</strong><button class="order-product" data-product="Deep Dish Clásica" aria-label="Pedir Deep Dish Clásica por WhatsApp">↗</button></div></article>
+              <article class="product reveal"><div><p class="kicker">Deep Dish Pizza · USA (8 porciones)</p><h3>California</h3><p>Pepperoni, jamón, hongos, aceitunas negras, chile verde, cebolla, mozzarella y salsa de tomate.</p></div><div class="product-action"><strong>$36</strong><button class="order-product" data-product="Deep Dish California" aria-label="Pedir Deep Dish California por WhatsApp">↗</button></div></article>
+            </div>
+            <div style="padding-top: 1rem;">
+              <article class="product reveal"><div><p class="kicker">La Fugazzeta · Argentina (8 porciones)</p><h3>La Fugazzeta</h3><p>Sin salsa de tomate. Rellena de mucho queso, jamón, mucha cebolla, aceitunas verdes y orégano. Evolución de la clásica pizza de cebolla italiana.</p></div><div class="product-action"><strong>$20</strong><button class="order-product" data-product="La Fugazzeta" aria-label="Pedir La Fugazzeta por WhatsApp">↗</button></div></article>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-layout" id="calzones" hidden>
+          <div class="featured-menu image-placeholder reveal"><img src="assets/calzone-la-clasica.jpg" alt="Calzone artesanal de La Clásica" loading="lazy" /><div><p class="kicker">Italia · Tradición</p><h3>Calzone</h3><p>Originado en el sur de Italia durante el siglo XVIII, el calzone nació como una solución de comida callejera para las clases obreras.</p></div></div>
+          <div class="product-list" aria-label="Calzones">
+            <article class="product reveal"><div><p class="kicker">Clásico</p><h3>Pepperoni</h3><p>Pepperoni, queso fiordilatte y salsa de tomate.</p></div><div class="product-action"><strong>$10</strong><button class="order-product" data-product="Calzone Pepperoni" aria-label="Pedir Calzone Pepperoni por WhatsApp">↗</button></div></article>
+            <article class="product reveal"><div><p class="kicker">Clásico</p><h3>Jamón</h3><p>Jamón, queso fiordilatte y salsa de tomate.</p></div><div class="product-action"><strong>$10</strong><button class="order-product" data-product="Calzone Jamón" aria-label="Pedir Calzone Jamón por WhatsApp">↗</button></div></article>
+            <article class="product reveal"><div><p class="kicker">Especial</p><h3>Full Carnes</h3><p>Pepperoni, jamón, chorizo español, salami alemán, salchicha italiana, queso fiordilatte y salsa de tomate.</p></div><div class="product-action"><strong>$11</strong><button class="order-product" data-product="Calzone Full Carnes" aria-label="Pedir Calzone Full Carnes por WhatsApp">↗</button></div></article>
+            <article class="product reveal"><div><p class="kicker">Vegetariano</p><h3>Margarita</h3><p>Salsa de tomate, queso fiordilatte y albahaca.</p></div><div class="product-action"><strong>$10</strong><button class="order-product" data-product="Calzone Margarita" aria-label="Pedir Calzone Margarita por WhatsApp">↗</button></div></article>
+            <article class="product reveal"><div><p class="kicker">Especial</p><h3>Brooklyn</h3><p>Pepperoni, champiñones, salsa de tomate, orégano, quesos fiordilatte y parmesano.</p></div><div class="product-action"><strong>$10</strong><button class="order-product" data-product="Calzone Brooklyn" aria-label="Pedir Calzone Brooklyn por WhatsApp">↗</button></div></article>
+            <article class="product reveal"><div><p class="kicker">Especial</p><h3>Mediterráneo</h3><p>Champiñones, tomate cherry, aceitunas verdes y negras, albahaca, queso fiordilatte y salsa de tomate.</p></div><div class="product-action"><strong>$11</strong><button class="order-product" data-product="Calzone Mediterráneo" aria-label="Pedir Calzone Mediterráneo por WhatsApp">↗</button></div></article>
+          </div>
+        </div>
+
+        <div class="menu-layout" id="gelato" hidden>
+          <div class="featured-menu image-placeholder reveal"><img src="assets/gelato-shakes.png" alt="Gelato Shakes de La Clásica — Coco, Crema de Avellana, Pistacchio Siciliano" loading="lazy" /><div><p class="kicker">Auténtico Gelato Italiano · Est. 2015</p><h3>Gelateria<br/>de La Clásica</h3><p>Los mismos ingredientes italianos, transformados en experiencias cremosas, intensas y reconfortantes.</p></div></div>
+          <div class="product-list" aria-label="Gelato">
+            <article class="product reveal"><div><p class="kicker">Gelato Shake</p><h3>Coco Shake</h3><p>La esencia de nuestro gelato en versión cremosa y fría para beber.</p></div><div class="product-action"><strong>$5.75</strong><button class="order-product" data-product="Gelato Shake Coco" aria-label="Pedir Gelato Shake Coco por WhatsApp">↗</button></div></article>
+            <article class="product reveal"><div><p class="kicker">Gelato Shake</p><h3>Crema de Avellana</h3><p>Gelato de crema de avellana, cremoso y profundamente reconfortante.</p></div><div class="product-action"><strong>$5.75</strong><button class="order-product" data-product="Gelato Shake Crema de Avellana" aria-label="Pedir Gelato Shake Crema de Avellana por WhatsApp">↗</button></div></article>
+            <article class="product reveal"><div><p class="kicker">Gelato Shake</p><h3>Pistacchio Siciliano</h3><p>Intenso, cremoso y con la esencia del pistacho siciliano.</p></div><div class="product-action"><strong>$6.50</strong><button class="order-product" data-product="Gelato Shake Pistacchio Siciliano" aria-label="Pedir Gelato Shake Pistacchio por WhatsApp">↗</button></div></article>
+            <article class="product reveal"><div><p class="kicker">Gelato Shake</p><h3>Chocolate Italiano</h3><p>Gelato de chocolate intenso, en versión fría para beber.</p></div><div class="product-action"><strong>$5.75</strong><button class="order-product" data-product="Gelato Shake Chocolate Italiano" aria-label="Pedir Gelato Shake Chocolate por WhatsApp">↗</button></div></article>
+            <article class="product reveal"><div><p class="kicker">Gelato Shake</p><h3>Vainilla Clásica</h3><p>La vainilla italiana en su forma más suave y cremosa.</p></div><div class="product-action"><strong>$5.75</strong><button class="order-product" data-product="Gelato Shake Vainilla Clásica" aria-label="Pedir Gelato Shake Vainilla por WhatsApp">↗</button></div></article>
+            <article class="product reveal"><div><p class="kicker">Gelato Fundido</p><h3>Pistacchio Cremoso</h3><p>Servido caliente. Con dos galletas waffle y cobertura de pistacchio y avellanas.</p></div><div class="product-action"><strong>$5</strong><button class="order-product" data-product="Gelato Fundido Pistacchio Cremoso" aria-label="Pedir Gelato Fundido Pistacchio por WhatsApp">↗</button></div></article>
+            <article class="product reveal"><div><p class="kicker">Gelato Fundido</p><h3>Crema de Avellana</h3><p>Servido caliente. Galletas waffle con cobertura de chocolate y avellanas.</p></div><div class="product-action"><strong>$4.50</strong><button class="order-product" data-product="Gelato Fundido Crema de Avellana" aria-label="Pedir Gelato Fundido Crema de Avellana por WhatsApp">↗</button></div></article>
+            <article class="product reveal"><div><p class="kicker">Gelato Fundido</p><h3>Chocolate Velvet</h3><p>Servido caliente. Galletas waffle con cobertura de chocolate y almendras.</p></div><div class="product-action"><strong>$4.50</strong><button class="order-product" data-product="Gelato Fundido Chocolate Velvet" aria-label="Pedir Gelato Fundido Chocolate Velvet por WhatsApp">↗</button></div></article>
+          </div>
+        </div>
+
+        <p class="menu-note">Selección basada en el menú proporcionado. Confirma disponibilidad, tamaños y precios en cada sucursal antes de publicar.</p>
+      </section>
+
+      <section class="founder section-pad" id="fundador" aria-labelledby="founder-title"><div class="founder-content reveal"><p class="eyebrow">El pizzaiolo</p><h2 id="founder-title">Juan<br /><em>Cárcamo.</em></h2><p>La búsqueda por una pizza honesta empezó en un jardín y no ha dejado de crecer. Técnica, producto y una mesa siempre abierta.</p><p class="award-line">Pizza Maker of the Year · 2026</p></div><figure class="founder-image reveal"><img src="assets/Juan Carcamo.jpg" alt="Fotografía oficial de Juan Cárcamo" loading="lazy" style="border-radius:6px; box-shadow:0 4px 18px rgba(0,0,0,.15); width:100%; height:auto;" /></figure></section>
+
+      <section class="instagram section-pad" aria-labelledby="instagram-title"><div class="instagram-head"><div><p class="eyebrow">La mesa, el fuego, la gente</p><h2 id="instagram-title">@pizzerialaaclasica</h2></div><a class="btn btn-outline" href="https://www.instagram.com/pizzerialaaclasica/" target="_blank" rel="noreferrer">Ver Instagram ↗</a></div><div class="insta-grid"><figure class="image-placeholder"><img src="assets/interior-garden.jpeg" alt="Interior de La Clásica" loading="lazy" /></figure><figure class="image-placeholder"><img src="assets/interior-vintage.jpeg" alt="Interior clásico de La Clásica" loading="lazy" /></figure><figure class="image-placeholder"><img src="assets/interior-oven.jpeg" alt="Cocina de La Clásica" loading="lazy" /></figure><figure class="image-placeholder"><img src="assets/interior-salon.jpeg" alt="Salón de La Clásica" loading="lazy" /></figure><figure class="image-placeholder"><img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=700&q=75" alt="Pizza de reemplazo para Instagram" loading="lazy" /><figcaption>IMAGEN DE REEMPLAZO</figcaption></figure><figure class="image-placeholder"><img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=700&q=75" alt="Horno de reemplazo para Instagram" loading="lazy" /><figcaption>IMAGEN DE REEMPLAZO</figcaption></figure></div></section>
+
+      <section class="locations section-pad" id="sucursales" aria-labelledby="locations-title"><div class="section-intro reveal"><p class="eyebrow">Nuestra mesa</p><h2 id="locations-title">Ven a <em>visitarnos.</em></h2></div><div class="location-grid"><article><p class="location-index">01</p><h3>Santa Tecla</h3><address>5ª Calle Oriente No. 2-7<br />Santa Tecla, La Libertad</address><p class="location-hours">Lunes a viernes: 12:00 PM – 2:00 PM / 6:00 PM – 9:00 PM<br />Sábado y domingo: 12:00 PM – 9:00 PM</p><p class="location-phone">+503 7967 1174</p><div class="location-actions"><a class="text-link" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Pizzer%C3%ADa+La+Cl%C3%A1sica+Santa+Tecla">Cómo llegar <span>↗</span></a><a class="btn btn-primary whatsapp-link" data-message="Hola, quiero ordenar en La Clásica Santa Tecla.">Ordenar ↗</a></div></article><article><p class="location-index">02</p><h3>Escalón</h3><address>3ª Calle Poniente y Av. Masferrer<br />San Salvador</address><p class="location-hours">Martes a viernes: 12:00 PM – 2:00 PM / 6:00 PM – 9:00 PM<br />Sábado y domingo: 12:00 PM – 9:00 PM</p><p class="location-phone">+503 7967 1174</p><div class="location-actions"><a class="text-link" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Pizzer%C3%ADa+La+Cl%C3%A1sica+Escal%C3%B3n">Cómo llegar <span>↗</span></a><a class="btn btn-primary whatsapp-link" data-message="Hola, quiero ordenar en La Clásica Escalón.">Ordenar ↗</a></div></article><article><p class="location-index">03</p><h3>Centro Histórico</h3><address>Centro Histórico<br />San Salvador</address><p>Horarios y teléfono: confirmar con la sucursal.</p><a class="text-link" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Pizzer%C3%ADa+La+Cl%C3%A1sica+Centro+Hist%C3%B3rico+San+Salvador">Cómo llegar <span>↗</span></a></article></div></section>
+    </main>
+    <footer id="contacto"><div class="footer-brand"><a href="#top" class="footer-logo" aria-label="La Clásica, inicio"><img src="assets/logo-la-clasica.png" alt="La Clásica" /></a><p>El arte de hacer pizza.</p></div><div><p class="kicker">Explora</p><a href="#menu">Menú</a><a href="#historia">Historia</a><a href="#sucursales">Sucursales</a></div><div><p class="kicker">Síguenos</p><a href="https://www.instagram.com/pizzerialaaclasica/" target="_blank" rel="noreferrer">Instagram ↗</a><a class="whatsapp-link" data-message="Hola, quiero hablar con Pizzería La Clásica.">WhatsApp ↗</a></div><p class="footer-small">© <span id="year"></span> Pizzería La Clásica.<br />Sitio conceptual — validar información comercial antes de publicar.</p></footer>
+    <nav class="mobile-order" aria-label="Acciones rápidas"><a href="#menu">Menú</a><a href="#sucursales">Ubicaciones</a><a class="whatsapp-link" data-message="Hola, quiero ordenar en Pizzería La Clásica.">Ordenar ↗</a></nav>
+    <a class="whatsapp-float whatsapp-link" data-message="Hola, quiero ordenar en Pizzería La Clásica." href="https://wa.me/50379671174" target="_blank" rel="noreferrer" aria-label="Contactar por WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+    <script src="config.js"></script><script src="script.js"></script>
+  </body>
+</html>
