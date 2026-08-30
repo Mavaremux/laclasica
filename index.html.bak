@@ -18,20 +18,7 @@
     <header class="site-header" id="top">
       <div class="header-branding">
         <a href="#top" class="brand official-logo" aria-label="Pizzería La Clásica, inicio"><img src="assets/logo-la-clasica.png" alt="La Clásica" /></a>
-        <div class="header-awards" aria-label="Reconocimientos principales de La Clásica">
-          <button class="award-mini award-mini-logo" type="button" data-gallery="reconocimientos" data-index="2" aria-label="Ver reconocimiento 50 Top Pizza Latin America 2026, puesto 5">
-            <img src="assets/reconocimientos/50-top-pizza-logo.jpeg" alt="50 Top Pizza" loading="lazy" />
-          </button>
-          <button class="award-mini award-mini-rank" type="button" data-gallery="reconocimientos" data-index="2" aria-label="Ver reconocimiento oficial: 5th Place 2026">
-            <span class="award-mini-number">5th</span>
-            <small>Place · 2026</small>
-            <span>Latin America</span>
-          </button>
-          <button class="award-mini award-mini-best" type="button" data-gallery="reconocimientos" data-index="3" aria-label="Ver reconocimiento Pizza Maker of the Year 2026">
-            <strong>The Best Pizza</strong>
-            <small>Juan Cárcamo · 2026</small>
-          </button>
-        </div>
+        <img class="header-awards" src="assets/premios-la-clasica.png" alt="50 Top Pizza, Top Pizzería en El Salvador y The Best Pizza" />
       </div>
       <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><span class="sr-only">Abrir menú</span></button>
       <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
@@ -52,37 +39,17 @@
           <img src="assets/catalogo/catalogo-01-00.jpg" alt="Selección de pizzas de La Clásica" fetchpriority="high" />
           <figcaption>IMAGEN DEL CATÁLOGO · LA CLÁSICA</figcaption>
         </figure>
-        <button class="award-stamp award-stamp-card" type="button" data-gallery="reconocimientos" data-index="2" aria-label="Ver reconocimiento oficial: 50 Top Pizza Latin America 2026, 5th Place">
-          <img src="assets/reconocimientos/50-top-pizza-logo.jpeg" alt="" aria-hidden="true" />
-          <div>
-            <strong>5th Place</strong>
-            <span>50 Top Pizza · Latin America 2026</span>
-          </div>
-        </button>
+        <button class="award-stamp" type="button" data-gallery="reconocimientos" data-index="2" aria-label="Ver reconocimiento: puesto 5 en 50 Top Pizza Latin America 2026"><strong>#5</strong><span>50 Top Pizza<br />Latin America<br />2026</span></button>
         <span class="flour flour-one" aria-hidden="true"></span><span class="flour flour-two" aria-hidden="true"></span>
       </section>
 
       <section class="recognition section-pad" aria-labelledby="recognition-title">
         <div class="recognition-number" aria-hidden="true">5</div>
-<div class="recognition-copy reveal">
-            <p class="eyebrow">Reconocimientos</p>
-            <h2 id="recognition-title">Entre las<br /><em>mejores.</em></h2>
-            <a href="https://thebestchefpizza.com/chefs/juan-carcamo/" target="_blank" rel="noreferrer" class="recognition-external-link" aria-label="Ver perfil de Juan Cárcamo en The Best Chef Pizza">The Best Chef Pizza ↗</a>
-            <p>Una trayectoria reconocida por 50 Top Pizza y la industria internacional: del puesto 39 en 2024 al 5.º lugar de Latinoamérica en 2026.</p>
-            <div class="recognition-awards-img recognition-logo-strip" aria-label="Reconocimientos destacados">
-            <button class="award-mini award-mini-logo" type="button" data-gallery="reconocimientos" data-index="2" aria-label="Ver reconocimiento 50 Top Pizza">
-              <img src="assets/reconocimientos/50-top-pizza-logo.jpeg" alt="50 Top Pizza" loading="lazy" />
-            </button>
-            <button class="award-mini award-mini-rank" type="button" data-gallery="reconocimientos" data-index="2" aria-label="Ver puesto 5 en 50 Top Pizza Latin America 2026">
-              <span class="award-mini-number">5th</span>
-              <small>Place · 2026</small>
-              <span>Latin America</span>
-            </button>
-            <button class="award-mini award-mini-best" type="button" data-gallery="reconocimientos" data-index="3" aria-label="Ver reconocimiento Pizza Maker of the Year 2026">
-              <strong>The Best Pizza</strong>
-              <small>Juan Cárcamo · 2026</small>
-            </button>
-          </div>
+        <div class="recognition-copy reveal">
+          <p class="eyebrow">Reconocimientos</p>
+          <h2 id="recognition-title">Entre las<br /><em>mejores.</em></h2>
+          <p>Una trayectoria reconocida por 50 Top Pizza y la industria internacional: del puesto 39 en 2024 al 5.º lugar de Latinoamérica en 2026.</p>
+          <figure class="recognition-awards-img recognition-logo-strip"><img src="assets/premios-la-clasica.png" alt="50 Top Pizza, Top Pizzería en El Salvador, 5.º lugar en Latinoamérica 2026 y The Best Pizza" loading="lazy" /></figure>
         </div>
         <div class="recognition-detail reveal">
           <div class="award-cards" aria-label="Reconocimientos oficiales de La Clásica">
@@ -90,8 +57,6 @@
             <button class="award-card" type="button" data-gallery="reconocimientos" data-index="1"><img src="assets/reconocimientos/50-top-2025-9.png" alt="50 Top Pizza Latin America 2025 — puesto 9" loading="lazy" /><span><b>2025</b>9.º lugar</span></button>
             <button class="award-card" type="button" data-gallery="reconocimientos" data-index="2"><img src="assets/reconocimientos/50-top-2026-5.png" alt="50 Top Pizza Latin America 2026 — puesto 5" loading="lazy" /><span><b>2026</b>5.º lugar</span></button>
             <button class="award-card" type="button" data-gallery="reconocimientos" data-index="3"><img src="assets/reconocimientos/pizza-maker-2026.png" alt="Juan Cárcamo — Pizza Maker of the Year 2026, Ferrarelle Award" loading="lazy" /><span><b>2026</b>Pizza Maker of the Year</span></button>
-            <button class="award-card" type="button" data-gallery="reconocimientos" data-index="4"><img src="assets/reconocimientos/tbc2026milan.jpg" alt="The Best Chef Pizza 2026 · Milán · Juan Cárcamo" loading="lazy" /><span><b>2026</b>The Best Chef · Milán</span></button>
-            <button class="award-card" type="button" data-gallery="reconocimientos" data-index="5"><img src="assets/reconocimientos/100 juan_carcamo.jpg" alt="The Best Chef Pizza 100 · Juan Cárcamo" loading="lazy" /><span><b>2026</b>The Best Chef 100</span></button>
           </div>
           <hr /><p class="kicker">JUAN CÁRCAMO</p><h3>Pizza Maker<br />of the Year · 2026</h3>
           <p class="recognition-hint">Haz clic en un reconocimiento para verlo en detalle.</p>
@@ -99,7 +64,7 @@
       </section>
 
       <section class="story section-pad" id="historia" aria-labelledby="story-title">
-        <figure class="story-image image-placeholder reveal"><img src="assets/sr_juan_horno.jpg" alt="Juan Cárcamo junto al horno en los inicios de La Clásica" loading="lazy" /><figcaption>LOS INICIOS · LA CLÁSICA</figcaption></figure>
+        <figure class="story-image image-placeholder reveal"><img src="assets/historia/historia-horno-jardin.jpeg" alt="El horno y jardín donde comenzó la historia de Pizzería La Clásica" loading="lazy" /><figcaption>LOS INICIOS · LA CLÁSICA</figcaption></figure>
         <div class="story-copy reveal"><p class="eyebrow">Nuestra historia</p><h2 id="story-title">De un horno en casa a las mejores de Latinoamérica.</h2><p>La Clásica nació en 2014 en el jardín de un hogar salvadoreño, cuando Juan Cárcamo soñaba con preparar las mejores pizzas para su familia y amigos. Ese espíritu continúa: tiempo de fermentación, ingredientes de altísima calidad, temperatura, técnica y pasión por cada estilo.</p><a class="text-link" href="#fundador">Conoce a Juan <span>→</span></a></div>
       </section>
 
@@ -208,7 +173,7 @@
 
       <section class="founder section-pad" id="fundador" aria-labelledby="founder-title"><div class="founder-content reveal"><p class="eyebrow">El pizzaiolo</p><h2 id="founder-title">Juan<br /><em>Cárcamo.</em></h2><p>La búsqueda por una pizza honesta empezó en un jardín y no ha dejado de crecer. Técnica, producto y una mesa siempre abierta.</p><p class="award-line">Pizza Maker of the Year · 2026</p></div><figure class="founder-image reveal"><img src="assets/Juan Carcamo.jpg" alt="Fotografía oficial de Juan Cárcamo" loading="lazy" style="border-radius:6px; box-shadow:0 4px 18px rgba(0,0,0,.15); width:100%; height:auto;" /></figure></section>
 
-      <section class="instagram section-pad" aria-labelledby="instagram-title"><div class="instagram-head"><div><p class="eyebrow">La mesa, el fuego, la gente</p><h2 id="instagram-title">@pizzerialaaclasica</h2></div><a class="btn btn-outline" href="https://www.instagram.com/pizzerialaaclasica/" target="_blank" rel="noreferrer">Ver Instagram ↗</a></div><div class="insta-grid"><figure class="image-placeholder"><img src="assets/interior-garden.jpeg" alt="Interior de La Clásica" loading="lazy" /></figure><figure class="image-placeholder"><img src="assets/interior-vintage.jpeg" alt="Interior clásico de La Clásica" loading="lazy" /></figure><figure class="image-placeholder"><img src="assets/interior-oven.jpeg" alt="Cocina de La Clásica" loading="lazy" /></figure><figure class="image-placeholder"><img src="assets/interior-salon.jpeg" alt="Salón de La Clásica" loading="lazy" /></figure><figure class="image-placeholder"><img src="assets/clasica_deliveryonly.jpg" alt="La Clásica delivery only" loading="lazy" /></figure><figure class="image-placeholder"><img src="assets/clasica_2016.jpg" alt="La Clásica 2016" loading="lazy" /></figure></div></section>
+      <section class="instagram section-pad" aria-labelledby="instagram-title"><div class="instagram-head"><div><p class="eyebrow">La mesa, el fuego, la gente</p><h2 id="instagram-title">@pizzerialaaclasica</h2></div><a class="btn btn-outline" href="https://www.instagram.com/pizzerialaaclasica/" target="_blank" rel="noreferrer">Ver Instagram ↗</a></div><div class="insta-grid"><figure class="image-placeholder"><img src="assets/interior-garden.jpeg" alt="Interior de La Clásica" loading="lazy" /></figure><figure class="image-placeholder"><img src="assets/interior-vintage.jpeg" alt="Interior clásico de La Clásica" loading="lazy" /></figure><figure class="image-placeholder"><img src="assets/interior-oven.jpeg" alt="Cocina de La Clásica" loading="lazy" /></figure><figure class="image-placeholder"><img src="assets/interior-salon.jpeg" alt="Salón de La Clásica" loading="lazy" /></figure><figure class="image-placeholder"><img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=700&q=75" alt="Pizza de reemplazo para Instagram" loading="lazy" /><figcaption>IMAGEN DE REEMPLAZO</figcaption></figure><figure class="image-placeholder"><img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=700&q=75" alt="Horno de reemplazo para Instagram" loading="lazy" /><figcaption>IMAGEN DE REEMPLAZO</figcaption></figure></div></section>
 
       <section class="locations section-pad" id="sucursales" aria-labelledby="locations-title"><div class="section-intro reveal"><p class="eyebrow">Nuestra mesa</p><h2 id="locations-title">Ven a <em>visitarnos.</em></h2></div><div class="location-grid"><article><p class="location-index">01</p><h3>Santa Tecla</h3><address>5ª Calle Oriente No. 2-7<br />Santa Tecla, La Libertad</address><p class="location-hours">Lunes a viernes: 12:00 PM – 2:00 PM / 6:00 PM – 9:00 PM<br />Sábado y domingo: 12:00 PM – 9:00 PM</p><p class="location-phone">+503 7967 1174</p><div class="location-actions"><a class="text-link" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Pizzer%C3%ADa+La+Cl%C3%A1sica+Santa+Tecla">Cómo llegar <span>↗</span></a><a class="btn btn-primary whatsapp-link" data-message="Hola, quiero ordenar en La Clásica Santa Tecla.">Ordenar ↗</a></div></article><article><p class="location-index">02</p><h3>Escalón</h3><address>3ª Calle Poniente y Av. Masferrer<br />San Salvador</address><p class="location-hours">Martes a viernes: 12:00 PM – 2:00 PM / 6:00 PM – 9:00 PM<br />Sábado y domingo: 12:00 PM – 9:00 PM</p><p class="location-phone">+503 7967 1174</p><div class="location-actions"><a class="text-link" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Pizzer%C3%ADa+La+Cl%C3%A1sica+Escal%C3%B3n">Cómo llegar <span>↗</span></a><a class="btn btn-primary whatsapp-link" data-message="Hola, quiero ordenar en La Clásica Escalón.">Ordenar ↗</a></div></article><article class="location-with-photo"><figure><img src="assets/centro-historico.jpeg" alt="Fachada de Pizzería La Clásica en Centro Histórico" loading="lazy" /></figure><p class="location-index">03</p><h3>Centro Histórico</h3><address>Centro Histórico<br />San Salvador</address><p>Horarios y teléfono: confirmar con la sucursal.</p><a class="text-link" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Pizzer%C3%ADa+La+Cl%C3%A1sica+Centro+Hist%C3%B3rico+San+Salvador">Cómo llegar <span>↗</span></a></article></div></section>
     </main>

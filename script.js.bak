@@ -108,9 +108,7 @@ const historyGalleries = {
       ["assets/reconocimientos/50-top-2024-39.png", "50 Top Pizza Latin America 2024 · 39.º lugar · Top Pizzería en El Salvador."],
       ["assets/reconocimientos/50-top-2025-9.png", "50 Top Pizza Latin America 2025 · 9.º lugar · Top Pizzería en El Salvador."],
       ["assets/reconocimientos/50-top-2026-5.png", "50 Top Pizza Latin America 2026 · 5.º lugar · Top Pizzería en El Salvador."],
-      ["assets/reconocimientos/pizza-maker-2026.png", "Juan Cárcamo · Pizza Maker of the Year 2026 · Ferrarelle Award."],
-      ["assets/reconocimientos/tbc2026milan.jpg", "The Best Chef Pizza 2026 · Milán · Juan Cárcamo."],
-      ["assets/reconocimientos/100 juan_carcamo.jpg", "The Best Chef Pizza 100 · Juan Cárcamo."]
+      ["assets/reconocimientos/pizza-maker-2026.png", "Juan Cárcamo · Pizza Maker of the Year 2026 · Ferrarelle Award."]
     ]
   }
 };
@@ -131,19 +129,11 @@ if (historyModal) {
     if (!activeGallery) return;
     const data = historyGalleries[activeGallery];
     const [src, caption] = data.items[activeIndex];
-    galleryImage.classList.add("is-changing");
-    galleryCaption.style.opacity = "0";
-    setTimeout(() => {
-      galleryImage.src = src;
-      galleryImage.alt = caption;
-      galleryCaption.textContent = caption;
-      galleryCounter.textContent = `${activeIndex + 1} / ${data.items.length}`;
-      [...galleryThumbs.children].forEach((button, i) => button.classList.toggle("active", i === activeIndex));
-      requestAnimationFrame(() => {
-        galleryImage.classList.remove("is-changing");
-        galleryCaption.style.opacity = "1";
-      });
-    }, 150);
+    galleryImage.src = src;
+    galleryImage.alt = caption;
+    galleryCaption.textContent = caption;
+    galleryCounter.textContent = `${activeIndex + 1} / ${data.items.length}`;
+    [...galleryThumbs.children].forEach((button, i) => button.classList.toggle("active", i === activeIndex));
   }
 
   function openGallery(name, startIndex = 0, trigger = null) {
