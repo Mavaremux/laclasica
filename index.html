@@ -35,8 +35,9 @@
       </div>
       <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><span class="sr-only">Abrir menú</span></button>
       <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
-        <a href="#menu">Menú</a><a href="#historia">Nosotros</a><a href="#estilos">Estilos</a><a href="#sucursales">Sucursales</a><a href="#contacto">Contacto</a>
+        <a href="#menu">Menú</a><a href="#historia">Historia</a><a href="#estilos">Estilos</a><a href="#sucursales">Sucursales</a><a href="#contacto">Contacto</a>
       </nav>
+      <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
       <a class="btn btn-primary header-cta whatsapp-link" data-message="Hola, quiero ordenar en Pizzería La Clásica.">Ordenar <span aria-hidden="true">↗</span></a>
     </header>
 
@@ -125,7 +126,7 @@
         <div class="ingredient-grid"><article><span>01</span><h3>Harina</h3><p>Tiempo, paciencia y una masa que habla por sí misma.</p></article><article><span>02</span><h3>Tomate</h3><p>El punto de partida para una salsa franca y luminosa.</p></article><article><span>03</span><h3>Mozzarella</h3><p>Equilibrio, cremosidad y el gesto exacto.</p></article><article><span>04</span><h3>Albahaca</h3><p>Un acento fresco para terminar cada historia.</p></article></div>
       </section>
 
-      <section class="oven" aria-labelledby="oven-title"><figure class="image-placeholder"><img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=1800&q=85" alt="Pizza saliendo de un horno" loading="lazy" /><figcaption>IMAGEN DE REEMPLAZO · Horno de La Clásica</figcaption></figure><div class="oven-overlay"><p class="eyebrow">El corazón de la cocina</p><h2 id="oven-title">El fuego es parte<br /><em>de la receta.</em></h2></div></section>
+      <section class="oven" aria-labelledby="oven-title"><figure class="image-placeholder"><img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=1800&q=85" alt="Pizza saliendo de un horno" loading="lazy" /><figcaption>IMAGEN DE REEMPLAZO · Horno de La Clásica</figcaption></figure><div class="oven-overlay"><p class="eyebrow">El corazón de la cocina</p><h2 id="oven-title">El fuego es parte<br /><em>de la receta.</em></h2><p class="oven-copy">La Clásica es la única pizzería de Latinoamérica que elabora los estilos de pizza más queridos del mundo, de la napolitana a la argentina. Todo comenzó en 2014, en el jardín de una casa salvadoreña, con el sueño de Juan Cárcamo de hacer la mejor pizza para su familia.</p></div></section>
 
       <section class="menu section-pad" id="menu" aria-labelledby="menu-title">
         <div class="menu-heading reveal"><p class="eyebrow">La carta</p><h2 id="menu-title">Pizza, sin<br /><em>apresurarse.</em></h2><p>Elige tu favorita. Cada pedido abre una conversación directa por WhatsApp.</p></div>
@@ -160,10 +161,24 @@
             <div class="reveal">
               <p class="kicker" style="color:#665e55;">Especialidades del mundo</p>
               <h3 style="font: 600 64px/.8 var(--serif); margin:0 0 1.5rem;">Pizzas<br/>Únicas</h3>
-              <img src="assets/deep dish.jpg" alt="Deep Dish Pizza" loading="lazy" style="width:100%; border-radius:4px; box-shadow:0 4px 18px rgba(0,0,0,0.15);" />
+              <figure class="image-placeholder featured-menu" style="height:clamp(340px,60vw,540px); border-radius:4px; box-shadow:0 4px 18px rgba(0,0,0,0.15);">
+                <img src="assets/deep dish.jpg" alt="Deep Dish Pizza" loading="lazy" />
+                <div>
+                  <p class="kicker">Deep Dish Pizza · USA (8 porciones)</p>
+                  <h3>Clásica</h3>
+                  <p>Masa profunda estilo tazón, rellena de capas masivas de queso, pepperoni, chile verde, cebolla y cubierta con salsa de tomate.</p>
+                </div>
+              </figure>
             </div>
             <div class="reveal">
-              <img src="assets/FUGAZZETA.jpg" alt="La Fugazzeta" loading="lazy" style="width:100%; border-radius:4px; box-shadow:0 4px 18px rgba(0,0,0,0.15);" />
+              <figure class="image-placeholder featured-menu" style="height:clamp(340px,60vw,540px); border-radius:4px; box-shadow:0 4px 18px rgba(0,0,0,0.15);">
+                <img src="assets/FUGAZZETA.jpg" alt="La Fugazzeta" loading="lazy" />
+                <div>
+                  <p class="kicker">La Fugazzeta · Argentina (8 porciones)</p>
+                  <h3>La Fugazzeta</h3>
+                  <p>Sin salsa de tomate. Rellena de mucho queso, jamón, mucha cebolla, aceitunas verdes y orégano. Evolución de la clásica pizza de cebolla italiana.</p>
+                </div>
+              </figure>
             </div>
           </div>
           <div class="product-list" aria-label="Pizzas Especiales">
@@ -206,12 +221,99 @@
         <p class="menu-note">Selección basada en el menú proporcionado. Confirma disponibilidad, tamaños y precios en cada sucursal antes de publicar.</p>
       </section>
 
-      <section class="founder section-pad" id="fundador" aria-labelledby="founder-title"><div class="founder-content reveal"><p class="eyebrow">El pizzaiolo</p><h2 id="founder-title">Juan<br /><em>Cárcamo.</em></h2><p>La búsqueda por una pizza honesta empezó en un jardín y no ha dejado de crecer. Técnica, producto y una mesa siempre abierta.</p><p class="award-line">Pizza Maker of the Year · 2026</p></div><figure class="founder-image reveal"><img src="assets/Juan Carcamo.jpg" alt="Fotografía oficial de Juan Cárcamo" loading="lazy" style="border-radius:6px; box-shadow:0 4px 18px rgba(0,0,0,.15); width:100%; height:auto;" /></figure></section>
+      <section class="founder section-pad" id="fundador" aria-labelledby="founder-title">
+        <div class="founder-content reveal">
+          <p class="eyebrow">El pizzaiolo</p>
+          <h2 id="founder-title">Juan<br /><em>Cárcamo.</em></h2>
+          <p>La búsqueda por una pizza honesta empezó en un jardín y no ha dejado de crecer. Técnica, producto y una mesa siempre abierta. Ingeniero de profesión, pizzaiolo de corazón.</p>
+          <p class="founder-studies">Ingeniero Industrial y de Sistemas del Instituto Tecnológico y de Estudios Superiores de Monterrey (MX). Maestría en Administración y Dirección de Empresas (UCA, SV).</p>
+          <p class="award-line">Pizza Maker of the Year · 2026</p>
+
+          <button class="formacion-toggle" id="formacionToggle" type="button" aria-expanded="false" aria-controls="formacionPanel">
+            Su formación <span class="plus" aria-hidden="true">+</span>
+          </button>
+
+          <div class="formacion-panel" id="formacionPanel">
+            <ul class="formacion-list" id="formacionList">
+              <li class="formacion-item">
+                <button class="formacion-row" type="button" aria-expanded="false">
+                  <span class="formacion-year">2014</span>
+                  <span class="formacion-name">Escuela Nacional de Pizza Bernardo Sifre</span>
+                  <span class="mini-plus" aria-hidden="true">+</span>
+                </button>
+                <div class="formacion-detail">
+                  <div class="formacion-detail-inner">
+                    <button class="formacion-photo-btn" type="button" data-cert="assets/bernardo_sifre_2014.jpg" data-name="Escuela Nacional de Pizza Bernardo Sifre · 2014" aria-label="Ver certificado, Escuela Nacional de Pizza Bernardo Sifre 2014">
+                      <img class="formacion-photo" src="assets/bernardo_sifre_2014.jpg" alt="Certificado Escuela Nacional de Pizza Bernardo Sifre" loading="lazy" />
+                    </button>
+                    <button class="formacion-place-btn" type="button" data-cert="assets/bernardo_sifre_2014.jpg" data-name="Escuela Nacional de Pizza Bernardo Sifre · 2014" aria-label="Ver certificado, Escuela Nacional de Pizza Bernardo Sifre 2014">España</button>
+                  </div>
+                </div>
+              </li>
+              <li class="formacion-item">
+                <button class="formacion-row" type="button" aria-expanded="false">
+                  <span class="formacion-year">2018</span>
+                  <span class="formacion-name">Scuola Italiana Pizzaioli</span>
+                  <span class="mini-plus" aria-hidden="true">+</span>
+                </button>
+                <div class="formacion-detail">
+                  <div class="formacion-detail-inner">
+                    <button class="formacion-photo-btn" type="button" data-cert="assets/scuola_italian_2018(2).jpg" data-name="Scuola Italiana Pizzaioli · 2018" aria-label="Ver certificado, Scuola Italiana Pizzaioli 2018">
+                      <img class="formacion-photo" src="assets/scuola_italian_2018(2).jpg" alt="Certificado Scuola Italiana Pizzaioli" loading="lazy" />
+                    </button>
+                    <button class="formacion-place-btn" type="button" data-cert="assets/scuola_italian_2018(2).jpg" data-name="Scuola Italiana Pizzaioli · 2018" aria-label="Ver certificado, Scuola Italiana Pizzaioli 2018">Italia</button>
+                  </div>
+                </div>
+              </li>
+              <li class="formacion-item">
+                <button class="formacion-row" type="button" aria-expanded="false">
+                  <span class="formacion-year">2021</span>
+                  <span class="formacion-name">Academia de Pizza Romana Massimiliano Saieva</span>
+                  <span class="mini-plus" aria-hidden="true">+</span>
+                </button>
+                <div class="formacion-detail">
+                  <div class="formacion-detail-inner">
+                    <button class="formacion-photo-btn" type="button" data-cert="assets/pizza_romana_massimiliano_2021.jpg" data-name="Academia de Pizza Romana Massimiliano Saieva · 2021" aria-label="Ver certificado, Academia de Pizza Romana Massimiliano Saieva 2021">
+                      <img class="formacion-photo" src="assets/pizza_romana_massimiliano_2021.jpg" alt="Certificado Academia de Pizza Romana Massimiliano Saieva" loading="lazy" />
+                    </button>
+                    <button class="formacion-place-btn" type="button" data-cert="assets/pizza_romana_massimiliano_2021.jpg" data-name="Academia de Pizza Romana Massimiliano Saieva · 2021" aria-label="Ver certificado, Academia de Pizza Romana Massimiliano Saieva 2021">España</button>
+                  </div>
+                </div>
+              </li>
+              <li class="formacion-item">
+                <button class="formacion-row" type="button" aria-expanded="false">
+                  <span class="formacion-year">2024</span>
+                  <span class="formacion-name">Associazione Verace Pizza Napoletana (AVPN)</span>
+                  <span class="mini-plus" aria-hidden="true">+</span>
+                </button>
+                <div class="formacion-detail">
+                  <div class="formacion-detail-inner">
+                    <button class="formacion-photo-btn" type="button" data-cert="assets/associacione_pizza_napoletana_2024.jpg" data-name="Associazione Verace Pizza Napoletana · 2024" aria-label="Ver certificado, Associazione Verace Pizza Napoletana 2024">
+                      <img class="formacion-photo" src="assets/associacione_pizza_napoletana_2024.jpg" alt="Certificado Associazione Verace Pizza Napoletana" loading="lazy" />
+                    </button>
+                    <button class="formacion-place-btn" type="button" data-cert="assets/associacione_pizza_napoletana_2024.jpg" data-name="Associazione Verace Pizza Napoletana · 2024" aria-label="Ver certificado, Associazione Verace Pizza Napoletana 2024">Atlanta, USA</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <figure class="founder-image reveal"><img src="assets/Juan Carcamo.jpg" alt="Fotografía oficial de Juan Cárcamo" loading="lazy" style="border-radius:6px; box-shadow:0 4px 18px rgba(0,0,0,.15); width:100%; height:auto;" /></figure>
+      </section>
 
       <section class="instagram section-pad" aria-labelledby="instagram-title"><div class="instagram-head"><div><p class="eyebrow">La mesa, el fuego, la gente</p><h2 id="instagram-title">@pizzerialaaclasica</h2></div><a class="btn btn-outline" href="https://www.instagram.com/pizzerialaaclasica/" target="_blank" rel="noreferrer">Ver Instagram ↗</a></div><div class="insta-grid"><figure class="image-placeholder"><img src="assets/interior-garden.jpeg" alt="Interior de La Clásica" loading="lazy" /></figure><figure class="image-placeholder"><img src="assets/interior-vintage.jpeg" alt="Interior clásico de La Clásica" loading="lazy" /></figure><figure class="image-placeholder"><img src="assets/interior-oven.jpeg" alt="Cocina de La Clásica" loading="lazy" /></figure><figure class="image-placeholder"><img src="assets/interior-salon.jpeg" alt="Salón de La Clásica" loading="lazy" /></figure><figure class="image-placeholder"><img src="assets/clasica_deliveryonly.jpg" alt="La Clásica delivery only" loading="lazy" /></figure><figure class="image-placeholder"><img src="assets/clasica_2016.jpg" alt="La Clásica 2016" loading="lazy" /></figure></div></section>
 
-      <section class="locations section-pad" id="sucursales" aria-labelledby="locations-title"><div class="section-intro reveal"><p class="eyebrow">Nuestra mesa</p><h2 id="locations-title">Ven a <em>visitarnos.</em></h2></div><div class="location-grid"><article><p class="location-index">01</p><h3>Santa Tecla</h3><address>5ª Calle Oriente No. 2-7<br />Santa Tecla, La Libertad</address><p class="location-hours">Lunes a viernes: 12:00 PM – 2:00 PM / 6:00 PM – 9:00 PM<br />Sábado y domingo: 12:00 PM – 9:00 PM</p><p class="location-phone">+503 7967 1174</p><div class="location-actions"><a class="text-link" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Pizzer%C3%ADa+La+Cl%C3%A1sica+Santa+Tecla">Cómo llegar <span>↗</span></a><a class="btn btn-primary whatsapp-link" data-message="Hola, quiero ordenar en La Clásica Santa Tecla.">Ordenar ↗</a></div></article><article><p class="location-index">02</p><h3>Escalón</h3><address>3ª Calle Poniente y Av. Masferrer<br />San Salvador</address><p class="location-hours">Martes a viernes: 12:00 PM – 2:00 PM / 6:00 PM – 9:00 PM<br />Sábado y domingo: 12:00 PM – 9:00 PM</p><p class="location-phone">+503 7967 1174</p><div class="location-actions"><a class="text-link" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Pizzer%C3%ADa+La+Cl%C3%A1sica+Escal%C3%B3n">Cómo llegar <span>↗</span></a><a class="btn btn-primary whatsapp-link" data-message="Hola, quiero ordenar en La Clásica Escalón.">Ordenar ↗</a></div></article><article class="location-with-photo"><figure><img src="assets/centro-historico.jpeg" alt="Fachada de Pizzería La Clásica en Centro Histórico" loading="lazy" /></figure><p class="location-index">03</p><h3>Centro Histórico</h3><address>Centro Histórico<br />San Salvador</address><p>Horarios y teléfono: confirmar con la sucursal.</p><a class="text-link" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Pizzer%C3%ADa+La+Cl%C3%A1sica+Centro+Hist%C3%B3rico+San+Salvador">Cómo llegar <span>↗</span></a></article></div></section>
+      <section class="locations section-pad" id="sucursales" aria-labelledby="locations-title"><div class="section-intro reveal"><p class="eyebrow">Nuestra mesa</p><h2 id="locations-title">Ven a <em>visitarnos.</em></h2></div><div class="location-grid"><article><p class="location-index">01</p><h3>Santa Tecla</h3><address>5ª Calle Oriente No. 2-7<br />Santa Tecla, La Libertad</address><p class="location-hours">Lunes a viernes: 12:00 PM – 2:00 PM / 6:00 PM – 9:00 PM<br />Sábado y domingo: 12:00 PM – 9:00 PM</p><p class="location-phone">+503 7967 1174</p><div class="location-actions"><a class="text-link" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Pizzer%C3%ADa+La+Cl%C3%A1sica+Santa+Tecla">Cómo llegar <span>↗</span></a><a class="btn btn-primary whatsapp-link" data-message="Hola, quiero ordenar en La Clásica Santa Tecla.">Ordenar ↗</a></div></article><article><p class="location-index">02</p><h3>Escalón</h3><address>3ª Calle Poniente y Av. Masferrer<br />San Salvador</address><p class="location-hours">Martes a viernes: 12:00 PM – 2:00 PM / 6:00 PM – 9:00 PM<br />Sábado y domingo: 12:00 PM – 9:00 PM</p><p class="location-phone">+503 7967 1174</p><div class="location-actions"><a class="text-link" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Pizzer%C3%ADa+La+Cl%C3%A1sica+Escal%C3%B3n">Cómo llegar <span>↗</span></a><a class="btn btn-primary whatsapp-link" data-message="Hola, quiero ordenar en La Clásica Escalón.">Ordenar ↗</a></div></article><article class="location-with-photo"><figure><img src="assets/centro-historico.jpeg" alt="Fachada de Pizzería La Clásica en Centro Histórico" loading="lazy" /></figure><p class="location-index">03</p><h3>Centro Histórico</h3><address>Centro Histórico<br />San Salvador</address><p>Horarios y teléfono: confirmar con la sucursal.</p><a class="text-link" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Pizzer%C3%ADa+La+Cl%C3%A1sica+Centro+Hist%C3%B3rico+San+Salvador">Cómo llegar <span>↗</span></a></article><article><p class="location-index">04</p><h3>San Miguel</h3><address>San Miguel<br />El Salvador</address><p class="location-hours">Horarios: confirmar con la sucursal.</p><p class="location-phone">Teléfono: confirmar con la sucursal.</p><div class="location-actions"><a class="text-link" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=13.468194,-88.169111">Cómo llegar <span>↗</span></a><a class="btn btn-primary whatsapp-link" data-message="Hola, quiero ordenar en La Clásica San Miguel.">Ordenar ↗</a></div></article></div></section>
     </main>
+
+    <div class="cert-modal" id="certModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="certTitle">
+      <div class="cert-modal-backdrop" data-close-cert></div>
+      <div class="cert-modal-panel" role="document">
+        <button class="cert-modal-close" type="button" data-close-cert aria-label="Cerrar certificado">×</button>
+        <p class="cert-modal-title" id="certTitle"></p>
+        <img id="certImage" src="" alt="" />
+      </div>
+    </div>
 
     <div class="history-modal" id="history-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="gallery-title">
       <div class="history-modal-backdrop" data-close-gallery></div>

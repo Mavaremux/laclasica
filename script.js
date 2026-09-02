@@ -56,8 +56,17 @@ tabButtons.forEach(btn => {
 
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".main-nav");
-toggle.addEventListener("click", () => { const opened = toggle.getAttribute("aria-expanded") === "true"; toggle.setAttribute("aria-expanded", String(!opened)); nav.classList.toggle("is-open", !opened); document.body.classList.toggle("nav-open", !opened); });
-nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => { toggle.setAttribute("aria-expanded", "false"); nav.classList.remove("is-open"); document.body.classList.remove("nav-open"); }));
+const backdrop = document.getElementById("navBackdrop");
+const setNav = open => {
+  toggle.setAttribute("aria-expanded", String(open));
+  nav.classList.toggle("is-open", open);
+  document.body.classList.toggle("nav-open", open);
+  document.documentElement.classList.toggle("nav-open", open);
+};
+toggle.addEventListener("click", () => setNav(toggle.getAttribute("aria-expanded") !== "true"));
+nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => setNav(false)));
+if (backdrop) backdrop.addEventListener("click", () => setNav(false));
+document.addEventListener("keydown", event => { if (event.key === "Escape" && nav.classList.contains("is-open")) setNav(false); });
 
 const header = document.querySelector(".site-header");
 addEventListener("scroll", () => header.classList.toggle("is-scrolled", scrollY > 24), { passive: true });
@@ -191,3 +200,56 @@ if (historyModal) {
     if (event.key === "ArrowRight") historyModal.querySelector(".gallery-next").click();
   });
 }
+
+(function initFormacion() {
+  const toggle = document.getElementById("formacionToggle");
+  const panel = document.getElementById("formacionPanel");
+  if (!toggle || !panel) return;
+  toggle.addEventListener("click", () => {
+    const open = panel.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", open);
+  });
+  panel.querySelectorAll(".formacion-row").forEach(row => {
+    row.addEventListener("click", () => {
+      const detail = row.nextElementSibling;
+      const open = detail.classList.toggle("open");
+      row.setAttribute("aria-expanded", open);
+    });
+  });
+})();
+
+(function initCertModal() {
+  const modal = document.getElementById("certModal");
+  const image = document.getElementById("certImage");
+  const title = document.getElementById("certTitle");
+  const closeBtn = modal?.querySelector(".cert-modal-close");
+  if (!modal || !image || !title || !closeBtn) return;
+
+  let lastTrigger = null;
+
+  const open = (src, name, trigger) => {
+    lastTrigger = trigger;
+    image.src = src;
+    image.alt = name;
+    title.textContent = name;
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("cert-open");
+    closeBtn.focus();
+  };
+  const close = () => {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("cert-open");
+    if (lastTrigger) lastTrigger.focus();
+  };
+
+  document.querySelectorAll("[data-cert]").forEach(btn => {
+    btn.addEventListener("click", () => open(btn.dataset.cert, btn.dataset.name, btn));
+  });
+  modal.querySelectorAll("[data-close-cert]").forEach(el => el.addEventListener("click", close));
+  document.addEventListener("keydown", event => {
+    if (!modal.classList.contains("is-open")) return;
+    if (event.key === "Escape") close();
+  });
+})();
