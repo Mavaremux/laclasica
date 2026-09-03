@@ -13,19 +13,6 @@ document.querySelectorAll(".whatsapp-link").forEach(link => {
   link.href = whatsappBase();
   link.addEventListener("click", event => { event.preventDefault(); openWhatsApp(link.dataset.message || "Hola, quiero ordenar en Pizzería La Clásica."); });
 });
-document.querySelectorAll(".order-product").forEach(button => button.addEventListener("click", () => openWhatsApp(`Hola, quiero ordenar una ${button.dataset.product} de Pizzería La Clásica.`)));
-
-// Menu tabs — animated
-const tabButtons = document.querySelectorAll(".menu-tabs button[data-tab]");
-const tabPanels  = document.querySelectorAll(".menu-layout");
-
-function showPanel(target) {
-  tabPanels.forEach(p => { p.hidden = true; p.classList.remove("tab-in"); });
-  target.hidden = false;
-  // Force reflow so animation restarts
-  void target.offsetWidth;
-  target.classList.add("tab-in");
-}
 
 // Smooth scroll helper — respects sticky header height
 function smoothScrollTo(el) {
@@ -42,17 +29,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-tabButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    if (btn.classList.contains("active")) return;
-    tabButtons.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-    const target = document.getElementById(btn.dataset.tab);
-    if (!target) return;
-    showPanel(target);
-    smoothScrollTo(target);
-  });
-});
 
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".main-nav");
@@ -80,46 +56,46 @@ const historyGalleries = {
     title: "2014 · Un horno en casa",
     description: "El origen de La Clásica: un jardín, un horno de leña y el deseo de cocinar para familia y amigos.",
     items: [
-      ["assets/historia/un-horno-en-casa-principal.jpeg", "Juan preparando pizza frente al horno en casa."],
-      ["assets/historia/horno-en-casa-jardin.jpeg", "Juan junto al horno de leña en el jardín."],
-      ["assets/historia/horno-el-rincon-de-juan.jpeg", "El Rincón de Juan, parte de los primeros recuerdos de la historia."],
-      ["assets/historia/horno-artesanal-01.jpeg", "Primer horno artesanal."],
-      ["assets/historia/horno-artesanal-02.jpeg", "El horno encendido durante los primeros años."],
-      ["assets/historia/horno-fuego-pizza.jpeg", "Pizza al fuego: el punto de partida de La Clásica."]
+      ["assets/historia/un-horno-en-casa-principal.webp", "Juan preparando pizza frente al horno en casa."],
+      ["assets/historia/horno-en-casa-jardin.webp", "Juan junto al horno de leña en el jardín."],
+      ["assets/historia/horno-el-rincon-de-juan.webp", "El Rincón de Juan, parte de los primeros recuerdos de la historia."],
+      ["assets/historia/horno-artesanal-01.webp", "Primer horno artesanal."],
+      ["assets/historia/horno-artesanal-02.webp", "El horno encendido durante los primeros años."],
+      ["assets/historia/horno-fuego-pizza.webp", "Pizza al fuego: el punto de partida de La Clásica."]
     ]
   },
   pedidos: {
     title: "Primeros pedidos",
     description: "La pizza empieza a viajar: las primeras entregas, el equipo y una operación que comenzaba a crecer.",
     items: [
-      ["assets/historia/primeros-pedidos-motos.jpeg", "Primeros pedidos y entregas en motocicleta."],
-      ["assets/historia/primeros-pedidos-cajas.jpeg", "Los primeros pedidos listos para salir."],
-      ["assets/historia/primeros-pedidos-flota.jpeg", "El crecimiento de la flota de reparto."],
-      ["assets/historia/primeros-pedidos-operacion.jpeg", "El equipo preparando y coordinando pedidos."],
-      ["assets/historia/primeros-envios-lluvia.jpeg", "Nuestros primeros envíos, incluso bajo la lluvia."]
+      ["assets/historia/primeros-pedidos-motos.webp", "Primeros pedidos y entregas en motocicleta."],
+      ["assets/historia/primeros-pedidos-cajas.webp", "Los primeros pedidos listos para salir."],
+      ["assets/historia/primeros-pedidos-flota.webp", "El crecimiento de la flota de reparto."],
+      ["assets/historia/primeros-pedidos-operacion.webp", "El equipo preparando y coordinando pedidos."],
+      ["assets/historia/primeros-envios-lluvia.webp", "Nuestros primeros envíos, incluso bajo la lluvia."]
     ]
   },
   expansion: {
     title: "Expansión",
     description: "Nuevos locales, más mesas y una comunidad que creció alrededor de La Clásica.",
     items: [
-      ["assets/historia/expansion-santa-tecla-delivery.jpeg", "La Clásica Santa Tecla, etapa de expansión del servicio a domicilio."],
-      ["assets/historia/primer-local-domicilio-2015.jpeg", "Nuestro primer local de domicilio · 2015."],
-      ["assets/historia/expansion-operacion-01.jpeg", "Una de las primeras jornadas de alta afluencia."],
-      ["assets/historia/expansion-operacion-02.jpeg", "El local creciendo junto a sus clientes."],
-      ["assets/historia/escalon-2017-primera-mesa.jpeg", "Sucursal Escalón · 2017 · nuestra primera mesa."]
+      ["assets/historia/expansion-santa-tecla-delivery.webp", "La Clásica Santa Tecla, etapa de expansión del servicio a domicilio."],
+      ["assets/historia/primer-local-domicilio-2015.webp", "Escalón - El Salvador"],
+      ["assets/historia/expansion-operacion-01.webp", "Centro Histórico - El Salvador"],
+      ["assets/historia/expansion-operacion-02.webp", "Santa Tecla - El Salvador"],
+      ["assets/historia/escalon-2017-primera-mesa.webp", "Sucursal Escalón · 2017 · nuestra primera mesa."]
     ]
   },
   reconocimientos: {
     title: "Reconocimientos",
     description: "Una evolución sostenida en 50 Top Pizza y el reconocimiento internacional al trabajo de Juan Cárcamo.",
     items: [
-      ["assets/reconocimientos/50-top-2024-39.png", "50 Top Pizza Latin America 2024 · 39.º lugar · Top Pizzería en El Salvador."],
-      ["assets/reconocimientos/50-top-2025-9.png", "50 Top Pizza Latin America 2025 · 9.º lugar · Top Pizzería en El Salvador."],
-      ["assets/reconocimientos/50-top-2026-5.png", "50 Top Pizza Latin America 2026 · 5.º lugar · Top Pizzería en El Salvador."],
-      ["assets/reconocimientos/pizza-maker-2026.png", "Juan Cárcamo · Pizza Maker of the Year 2026 · Ferrarelle Award."],
-      ["assets/reconocimientos/tbc2026milan.jpg", "The Best Chef Pizza 2026 · Milán · Juan Cárcamo."],
-      ["assets/reconocimientos/100 juan_carcamo.jpg", "The Best Chef Pizza 100 · Juan Cárcamo."]
+      ["assets/reconocimientos/50-top-2024-39.webp", "50 Top Pizza Latin America 2024 · 39.º lugar · Top Pizzería en El Salvador."],
+      ["assets/reconocimientos/50-top-2025-9.webp", "50 Top Pizza Latin America 2025 · 9.º lugar · Top Pizzería en El Salvador."],
+      ["assets/reconocimientos/50-top-2026-5.webp", "50 Top Pizza Latin America 2026 · 5.º lugar · Top Pizzería en El Salvador."],
+      ["assets/reconocimientos/pizza-maker-2026.webp", "Juan Cárcamo · Pizza Maker of the Year 2026 · Ferrarelle Award."],
+      ["assets/reconocimientos/tbc2026milan.webp", "The Best Chef Pizza 2026 · Milán · Juan Cárcamo."],
+      ["assets/reconocimientos/100 juan_carcamo.webp", "The Best Chef Pizza 100 · Juan Cárcamo."]
     ]
   }
 };
