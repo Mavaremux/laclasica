@@ -112,7 +112,7 @@
       </section>
 
       <section class="styles section-pad" id="menu" aria-labelledby="styles-title">
-        <div class="section-intro reveal"><p class="eyebrow">Hechas a su manera</p><h2 id="styles-title">Únicos en latinoamérica con amplia variedad de<br /><em>pizzas del mundo.</em></h2></div>
+        <div class="section-intro reveal"><p class="eyebrow">Pizza para todos los gustos</p><h2 id="styles-title">Únicos en Latinoamérica con la más amplia variedad de<br /><em>pizzas del mundo.</em></h2></div>
         <div class="style-scroller">
           <article class="style-card napo reveal"><span>01</span><h3>Napolitana</h3><p>Suave, elástica y marcada por el fuego.</p><a href="#carta">Explorar <span>→</span></a></article>
           <article class="style-card romana reveal"><span>02</span><h3>Romana</h3><p>Ligera, crujiente y generosa.</p><a href="#carta">Explorar <span>→</span></a></article>
@@ -282,48 +282,98 @@ const MENU = [
   {
     id:"entradas", num:0, name:"Entradas",
     desc:"Para abrir la mesa antes de la pizza — o disfrutar solos.",
-    subcats:[
-      {
-        key:"entradas", label:"Entradas",
-        items:[
-          { name:"Pan con Ajo Clásico", desc:"Pan artesanal tostado con mantequilla de ajo, hierbas y queso parmesano gratinado.",   price:"$5", img:"assets/catalogo/pan_con_ajo.webp", cardClass:"is-platter" },
-          { name:"Coyolitos",           desc:"Bocados fritos crujientes de masa de pizza, servidos con salsa de tomate de la casa.", price:"$7", img:"assets/menu/entradas-coyolitos.webp" },
-        ]
-      },
-      {
-        key:"ensaladas", label:"Ensaladas",
-        items:[
-          { name:"Mediterránea",         desc:"Burrata de Nápoles, prosciutto, arúgula, tomate cherry, crema balsámica de Módena IGP., albahaca, aceite de oliva y crutones romanos.", price:"$14", img:"assets/menu/ensaladas-mediterranea.webp" },
-          { name:"Caprese & Burrata",    desc:"Burrata de Nápoles, tomate, albahaca fresca, crema balsámica de Módena IGP. y aceite de oliva.",                                        price:"$9",  img:"assets/menu/ensaladas-caprese-burrata.webp" },
-          { name:"Stracciatella Caprese",desc:"Queso Stracciatella de Nápoles, tomate cherry confitado con orégano y ajo, albahaca fresca y pan de la casa.",                         price:"$12", img:"assets/menu/ensaladas-stracciatella.webp" },
-        ]
-      },
+    singlePhoto:"assets/catalogo/pan_con_ajo.webp",
+    eyebrow:"Elige tu entrada",
+    variants:[
+      { name:"BURRATA DE TEMPORADA", desc:"Burrata de Nápoles sobre sofrito de tomate San Marzano DOP y pan de la casa.", price:"$9" },
+      { name:"BRUSCHETTA SAN MARZANO", desc:"Cuatro unidades de pan con sofrito San Marzano DOP, queso stracciatella y albahaca.", price:"$9" },
+      { name:"PANINO ROMANO DE JAMÓN & STRACCIATELLA", desc:"Cuatro panini romanos crujientes rellenos de jamón York, stracciatella y aceite de oliva.", price:"$10" },
+      { name:"MARGARITA AL TAGLIO", desc:"Cuatro porciones de pizza margarita en masa romana madurada 72 horas.", price:"$8" },
+      { name:"FONDUTA ITALIANA", desc:"Fundido de queso, tomate San Marzano DOP, orégano, albahaca y pan de la casa.", price:"$8" },
     ]
   },
   {
-    id:"clasicas", num:1, name:"Clásicas",
+    id:"ensaladas", num:1, name:"Ensaladas",
+    desc:"Frescura, producto noble y aliños de autor.",
+    items:[
+      { name:"Mediterránea",         desc:"Burrata de Nápoles, prosciutto, arúgula, tomate cherry, crema balsámica de Módena IGP., albahaca, aceite de oliva y crutones romanos.", price:"$14", img:"assets/catalogo/mediterranea.webp" },
+      { name:"Caprese & Burrata",    desc:"Burrata de Nápoles, tomate, albahaca fresca, crema balsámica de Módena IGP. y aceite de oliva.",                                        price:"$9",  img:"assets/catalogo/cappreseyburrat.webp" },
+      { name:"Stracciatella Caprese",desc:"Queso Stracciatella de Nápoles, tomate cherry confitado con orégano y ajo, albahaca fresca y pan de la casa.",                         price:"$12", img:"assets/catalogo/stracciatellacaprese.webp" },
+      { name:"Burrata de Temporada", desc:"Burrata de Nápoles acompañada de ingredientes de temporada, albahaca fresca y aceite de oliva extra virgen.",                            price:"$14", img:"assets/catalogo/burratadet.webp" },
+    ]
+  },
+  {
+    id:"clasicas", num:2, name:"Clásicas",
     desc:"Las de siempre, hechas como deben ser.",
     singlePhoto:"assets/catalogo/pizza_clasica.webp",
     eyebrow:"Elige tu clásica",
     variants:[
-      { name:"Margherita",            desc:"Tomate San Marzano D.O.P., mozzarella, albahaca y aceite de oliva.",  price:"Desde $10" },
-      { name:"Marinara",              desc:"Tomate San Marzano D.O.P., ajo, orégano y aceite de oliva.",          price:"$11" },
-      { name:"Pepperoni",             desc:"Pepperoni, queso fiordilatte y salsa de tomate.",                      price:"$10" },
-      { name:"Jamón",                 desc:"Jamón, queso fiordilatte y salsa de tomate.",                          price:"$10" },
-      { name:"Margarita Vegetariana", desc:"Salsa de tomate, queso fiordilatte y albahaca.",                       price:"$10" },
+      // — Clásicas — (precios y descripciones: solo columna "6 porciones")
+      { name:"Jamón",               desc:"Jamón, queso mozzarella y salsa de tomate.",                                                                        price:"$9" },
+      { name:"Pepperoni",           desc:"Pepperoni, queso mozzarella y salsa de tomate.",                                                                     price:"$9" },
+      { name:"Hongos",              desc:"Champiñones frescos, queso mozzarella y salsa de tomate.",                                                           price:"$10" },
+      { name:"Super Pepperoni",     desc:"El doble de pepperoni, queso mozzarella y salsa de tomate.",                                                         price:"$12" },
+      { name:"San Gennaro",         desc:"Pepperoni, salchicha italiana, albahaca, salsa de tomate y quesos mozzarella & stracciatella.",                      price:"$12" },
+      { name:"Hawaiana",            desc:"Jamón, piña, queso mozzarella y salsa de tomate.",                                                                   price:"$11" },
+      { name:"Panceta y Hongos",    desc:"Tocino ahumado, champiñones, salsa de tomate y queso parmesano & fiordilatte.",                                      price:"$12" },
+      { name:"Brooklyn",            desc:"Pepperoni, champiñones frescos, quesos fiordilatte & parmesano, orégano y salsa de tomate.",                         price:"$10" },
+      { name:"Los Angeles",         desc:"Pepperoni, champiñones, cebolla morada, chile verde, tomate cherry, albahaca, queso mozzarella y salsa de tomate.",  price:"$12" },
+      { name:"Full Carnes Butcher", desc:"Jamón, pepperoni, chorizo español, salami alemán, salchicha italiana, queso mozzarella y salsa de tomate.",          price:"$13" },
+      // — Inspiración Vegetal —
+      { name:"Margarita",           desc:"Salsa de tomate, queso mozzarella, albahaca y aceite de oliva.",                                                     price:"$10" },
+      // Nota: "Provola y Pepe" no se incluye — no está disponible en formato de 6 porciones (NA en el menú).
+      { name:"New York Cheese",     desc:"Salsa de tomate y quesos mozzarella, parmesano y cheddar.",                                                          price:"$10" },
+      { name:"Mediterránea",        desc:"Champiñones frescos, tomate cherry, albahaca, aceitunas verdes & negras, salsa de tomate y queso mozzarella.",       price:"$12" },
+      { name:"Fresh Garden",        desc:"Champiñones frescos, cebolla morada, chile verde, tomate cherry, salsa de tomate y queso mozzarella.",               price:"$12" },
+      { name:"Hongos Salvajes",     desc:"Champiñones frescos, tres quesos (mozzarella, parmesano y queso azul) y miel de abeja.",                             price:"$12" },
+      // — Pizzas que Enamoran —
+      // Nota: "Amore Bechamel" no se incluye — no está disponible en formato de 6 porciones (N/A en el menú).
+      { name:"Amore",               desc:"Camarones, cangrejo, loroco, queso mozzarella y salsa de tomate.",                                                   price:"$12" },
+      { name:"Dolce Verona",        desc:"Jamón York, piña, quesos mozzarella, parmesano y gorgonzola, y reducción balsámica.",                                price:"$12" },
+      { name:"Nostra Reina",        desc:"Chorizo español, sofrito dulce de cebolla morada, tomate cherry y tocino ahumado, pasas, queso mozzarella y salsa de tomate.", price:"$12" },
+      { name:"Frosinone",           desc:"Prosciutto, tomate cherry, arúgula, reducción balsámica, quesos mozzarella, stracciatella y parmesano, y salsa de tomate.",    price:"$15" },
+      { name:"Fuego & Miel",        desc:"Chorizo español, cebolla morada, quesos stracciatella & mozzarella, miel de abeja picante, orégano, chile en escamas y aceite de oliva.", price:"$12" },
+      { name:"California Club",    desc:"Jamón, pepperoni, champiñones frescos, cebolla morada, chile verde, aceitunas negras, piña, queso mozzarella y salsa de tomate.",       price:"$13" },
     ]
   },
   {
-    id:"nyc", num:2, name:"New York Style",
-    desc:"Porción grande, masa fina y flexible — hecha para doblar.",
-    items:[
-      { name:"NY Style", desc:"Masa fina estirada a mano, pepperoni y mozzarella de alta humedad.", price:"Por confirmar", img:"assets/catalogo/new_york_pizza.webp" },
+    id:"nyc", num:3, name:"New York Style",
+    desc:"Porción grande, masa fina y flexible — hecha para doblar. Elige tu variante.",
+    singlePhoto:"assets/catalogo/new_york_pizza.webp",
+    eyebrow:"Elige tu New York",
+    orderPrefix:"New York",
+    variants:[
+      // Precios y descripciones: columna "8 porciones" (Estilo New York)
+      { name:"Jamón",               desc:"Jamón, queso mozzarella y salsa de tomate.",                                                                        price:"$12" },
+      { name:"Pepperoni",           desc:"Pepperoni, queso mozzarella y salsa de tomate.",                                                                     price:"$12" },
+      { name:"Hongos",              desc:"Champiñones frescos, queso mozzarella y salsa de tomate.",                                                           price:"$15" },
+      { name:"Super Pepperoni",     desc:"El doble de pepperoni, queso mozzarella y salsa de tomate.",                                                         price:"$18" },
+      { name:"San Gennaro",         desc:"Pepperoni, salchicha italiana, albahaca, salsa de tomate y quesos mozzarella & stracciatella.",                      price:"$18" },
+      { name:"Hawaiana",            desc:"Jamón, piña, queso mozzarella y salsa de tomate.",                                                                   price:"$16" },
+      { name:"Panceta y Hongos",    desc:"Tocino ahumado, champiñones, salsa de tomate y queso parmesano & fiordilatte.",                                      price:"$18" },
+      { name:"Brooklyn",            desc:"Pepperoni, champiñones frescos, quesos fiordilatte & parmesano, orégano y salsa de tomate.",                         price:"$16" },
+      { name:"Los Angeles",         desc:"Pepperoni, champiñones, cebolla morada, chile verde, tomate cherry, albahaca, queso mozzarella y salsa de tomate.",  price:"$18" },
+      { name:"Full Carnes Butcher", desc:"Jamón, pepperoni, chorizo español, salami alemán, salchicha italiana, queso mozzarella y salsa de tomate.",          price:"$20" },
+      { name:"Margarita",           desc:"Salsa de tomate, queso mozzarella, albahaca y aceite de oliva.",                                                     price:"$12" },
+      // Nota: "Provola y Pepe" no se incluye — no está disponible en formato de 8 porciones (NA en el menú).
+      { name:"New York Cheese",     desc:"Salsa de tomate y quesos mozzarella, parmesano y cheddar.",                                                          price:"$13" },
+      { name:"Mediterránea",        desc:"Champiñones frescos, tomate cherry, albahaca, aceitunas verdes & negras, salsa de tomate y queso mozzarella.",       price:"$16" },
+      { name:"Fresh Garden",        desc:"Champiñones frescos, cebolla morada, chile verde, tomate cherry, salsa de tomate y queso mozzarella.",               price:"$16" },
+      { name:"Hongos Salvajes",     desc:"Champiñones frescos, tres quesos (mozzarella, parmesano y queso azul) y miel de abeja.",                             price:"$18" },
+      { name:"Amore Bechamel",      desc:"Camarones, cangrejo, loroco, salsa bechamel y queso mozzarella.",                                                    price:"$18" },
+      { name:"Amore",               desc:"Camarones, cangrejo, loroco, queso mozzarella y salsa de tomate.",                                                   price:"$18" },
+      { name:"Dolce Verona",        desc:"Jamón York, piña, quesos mozzarella, parmesano y gorgonzola, y reducción balsámica.",                                price:"$18" },
+      { name:"Nostra Reina",        desc:"Chorizo español, sofrito dulce de cebolla morada, tomate cherry y tocino ahumado, pasas, queso mozzarella y salsa de tomate.", price:"$18" },
+      { name:"Frosinone",           desc:"Prosciutto, tomate cherry, arúgula, reducción balsámica, quesos mozzarella, stracciatella y parmesano, y salsa de tomate.",    price:"$24" },
+      { name:"Fuego & Miel",        desc:"Chorizo español, cebolla morada, quesos stracciatella & mozzarella, miel de abeja picante, orégano, chile en escamas y aceite de oliva.", price:"$20" },
+      { name:"California Club",    desc:"Jamón, pepperoni, champiñones frescos, cebolla morada, chile verde, aceitunas negras, piña, queso mozzarella y salsa de tomate.",       price:"$18" },
     ]
   },
   {
-    id:"detroit", num:3, name:"Detroit",
+    id:"detroit", num:4, name:"Detroit",
     desc:"Rectangular, bordes caramelizados y queso hasta la orilla — elige tu variante.",
     singlePhoto:"assets/catalogo/pizza_detroit.webp",
+    orderPrefix:"Detroit",
     variants:[
       { name:"Impala",        desc:"Camarones, cangrejo, tocino ahumado, cebolla morada, quesos fiordilatte y parmesano, salsa bechamel y perejil.",                                        price:"$25", promo:"Lun–Vie 2×45" },
       { name:"Continental",   desc:"Prosciutto, arúgula, tomate cherry, quesos fiordilatte y parmesano, crema balsámica de Módena IGP. y salsa de tomate.",                                price:"$25", promo:"Lun–Vie 2×45" },
@@ -333,7 +383,7 @@ const MENU = [
     ]
   },
   {
-    id:"chicago", num:4, name:"Chicago",
+    id:"chicago", num:5, name:"Chicago",
     desc:"Deep dish: masa profunda estilo tazón, para compartir.",
     singlePhoto:"assets/catalogo/pizza_chicago.webp",
     eyebrow:"Elige tu chicago",
@@ -343,10 +393,17 @@ const MENU = [
     ]
   },
   {
-    id:"padellino", num:5, name:"Padellino",
-    desc:"Estilo torinés: masa alta y aireada, horneada en molde individual.",
-    items:[
-      { name:"Padellino Clásico", desc:"Tomate, mozzarella y albahaca sobre masa alta, crujiente por fuera y suave por dentro.", price:"Por confirmar", img:"assets/catalogo/al_padelino.webp" },
+    id:"padellino", num:6, name:"Padellino",
+    desc:"Servida sobre una base de salsa de tomate italiana con albahaca.",
+    singlePhoto:"assets/catalogo/al_padelino.webp",
+    eyebrow:"Elige tu padellino",
+    orderPrefix:"Padellino",
+    variants:[
+      { name:"Pepperoni Rosso", desc:"Pepperoni, quesos fiordilatte y parmesano.",                                                                                         price:"$18", thumb:"assets/catalogo/padellino_pepperoni_rosso.webp" },
+      { name:"Verona",          desc:"Jamón York, quesos fiordilatte y parmesano.",                                                                                        price:"$18", thumb:"assets/catalogo/padellino_verona.webp" },
+      { name:"Vesubio",         desc:"Jamón, pepperoni, salchicha italiana, cebolla morada, chile verde, quesos fiordilatte y parmesano.",                                price:"$20", thumb:"assets/catalogo/padellino_vesubio.webp" },
+      { name:"Provola y Peppe", desc:"Queso provola de Nápoles, pimienta, albahaca y aceite de oliva.",                                                                   price:"$20", thumb:"assets/catalogo/padellino_provolaypepe.webp" },
+      { name:"Bellagio",        desc:"Prosciutto, arúgula, tomate cherry, quesos stracciatella, fiordilatte y parmesano, reducción balsámica y aceite de oliva con trufa blanca.", price:"$25", thumb:"assets/catalogo/padellino_bellagio.webp" },
     ]
   },
   {
@@ -355,14 +412,47 @@ const MENU = [
     subcats:[
       {
         key:"tonda", label:"Tonda Romana",
-        items:[
-          { name:"Tonda Romana Marinara", desc:"Masa fina y crujiente, tomate San Marzano D.O.P., ajo y orégano.", price:"$11",           img:"assets/catalogo/tonda_romana.webp" },
+        singlePhoto:"assets/catalogo/tonda_romana.webp",
+        eyebrow:"Elige tu tonda romana",
+        orderPrefix:"Tonda Romana",
+        variants:[
+          { name:"Margarita",       desc:"Tomate San Marzano D.O.P., queso fiordilatte, aceite de oliva y albahaca.",                                              price:"$11" },
+          { name:"Marinara",        desc:"Tomate San Marzano D.O.P., ajo, orégano y aceite de oliva.",                                                             price:"$11" },
+          { name:"Bosco Rosso",     desc:"Tomate San Marzano D.O.P., pepperoni, champiñones, queso fiordilatte, orégano y aceite de oliva.",                      price:"$11" },
+          { name:"Jamón & Hongos",  desc:"Tomate San Marzano D.O.P., jamón York, champiñones, queso fiordilatte, parmesano y aceite de oliva.",                   price:"$11" },
+          { name:"Hongos Salvajes", desc:"Champiñones, miel de abeja, aceite de oliva, quesos: Azul, fiordilatte y parmesano. (No lleva salsa)",                 price:"$11" },
         ]
       },
       {
         key:"pala", label:"Pala Romana",
-        items:[
-          { name:"Pala Romana Clásica",   desc:"Formato alargado, masa alveolada, cortada en porciones para compartir.",  price:"Por confirmar", img:"assets/catalogo/pala_romana.webp" },
+        singlePhoto:"assets/catalogo/pala_romana.webp",
+        eyebrow:"Elige tu pala romana",
+        orderPrefix:"Pala Romana",
+        variants:[
+          // Precios y descripciones: columna "18 porciones" (Romana Completa)
+          { name:"Jamón",               desc:"Jamón, queso mozzarella y salsa de tomate.",                                                                        price:"$30" },
+          { name:"Pepperoni",           desc:"Pepperoni, queso mozzarella y salsa de tomate.",                                                                     price:"$30" },
+          { name:"Hongos",              desc:"Champiñones frescos, queso mozzarella y salsa de tomate.",                                                           price:"$30" },
+          { name:"Super Pepperoni",     desc:"El doble de pepperoni, queso mozzarella y salsa de tomate.",                                                         price:"$40" },
+          { name:"San Gennaro",         desc:"Pepperoni, salchicha italiana, albahaca, salsa de tomate y quesos mozzarella & stracciatella.",                      price:"$40" },
+          { name:"Hawaiana",            desc:"Jamón, piña, queso mozzarella y salsa de tomate.",                                                                   price:"$30" },
+          { name:"Panceta y Hongos",    desc:"Tocino ahumado, champiñones, salsa de tomate y queso parmesano & fiordilatte.",                                      price:"$30" },
+          { name:"Brooklyn",            desc:"Pepperoni, champiñones frescos, quesos fiordilatte & parmesano, orégano y salsa de tomate.",                         price:"$30" },
+          { name:"Los Angeles",         desc:"Pepperoni, champiñones, cebolla morada, chile verde, tomate cherry, albahaca, queso mozzarella y salsa de tomate.",  price:"$30" },
+          { name:"Full Carnes Butcher", desc:"Jamón, pepperoni, chorizo español, salami alemán, salchicha italiana, queso mozzarella y salsa de tomate.",          price:"$40" },
+          { name:"Margarita",           desc:"Salsa de tomate, queso mozzarella, albahaca y aceite de oliva.",                                                     price:"$30" },
+          { name:"Provola y Pepe",      desc:"Salsa de tomate, queso provola ahumado de Nápoles, pimienta, albahaca y aceite de oliva.",                          price:"$30" },
+          { name:"New York Cheese",     desc:"Salsa de tomate y quesos mozzarella, parmesano y cheddar.",                                                          price:"$30" },
+          { name:"Mediterránea",        desc:"Champiñones frescos, tomate cherry, albahaca, aceitunas verdes & negras, salsa de tomate y queso mozzarella.",       price:"$30" },
+          { name:"Fresh Garden",        desc:"Champiñones frescos, cebolla morada, chile verde, tomate cherry, salsa de tomate y queso mozzarella.",               price:"$30" },
+          { name:"Hongos Salvajes",     desc:"Champiñones frescos, tres quesos (mozzarella, parmesano y queso azul) y miel de abeja.",                             price:"$30" },
+          { name:"Amore Bechamel",      desc:"Camarones, cangrejo, loroco, salsa bechamel y queso mozzarella.",                                                    price:"$40" },
+          { name:"Amore",               desc:"Camarones, cangrejo, loroco, queso mozzarella y salsa de tomate.",                                                   price:"$30" },
+          { name:"Dolce Verona",        desc:"Jamón York, piña, quesos mozzarella, parmesano y gorgonzola, y reducción balsámica.",                                price:"$30" },
+          { name:"Nostra Reina",        desc:"Chorizo español, sofrito dulce de cebolla morada, tomate cherry y tocino ahumado, pasas, queso mozzarella y salsa de tomate.", price:"$30" },
+          { name:"Frosinone",           desc:"Prosciutto, tomate cherry, arúgula, reducción balsámica, quesos mozzarella, stracciatella y parmesano, y salsa de tomate.",    price:"$45" },
+          { name:"Fuego & Miel",        desc:"Chorizo español, cebolla morada, quesos stracciatella & mozzarella, miel de abeja picante, orégano, chile en escamas y aceite de oliva.", price:"$30" },
+          { name:"California Club",    desc:"Jamón, pepperoni, champiñones frescos, cebolla morada, chile verde, aceitunas negras, piña, queso mozzarella y salsa de tomate.",       price:"$30" },
         ]
       },
     ]
@@ -372,9 +462,21 @@ const MENU = [
     desc:"Suave, elástica y marcada por el fuego de leña.",
     singlePhoto:"assets/catalogo/napoletana.webp",
     eyebrow:"Elige tu napolitana",
+    orderPrefix:"Napolitana",
     variants:[
-      { name:"Pizza Amore", desc:"Camarones, cangrejo, loroco, mozzarella y salsa de tomate.",                 price:"Desde $12" },
-      { name:"Brooklyn",    desc:"Pepperoni, champiñones, salsa de tomate, orégano, fiordilatte y parmesano.", price:"$10" },
+      { name:"Margarita D.O.P.",    desc:"Tomate San Marzano D.O.P., fiordilatte de Nápoles, albahaca y aceite de oliva.",                                           price:"$10" },
+      { name:"Marinara",            desc:"La segunda más popular de italia. Tomate San Marzano D.O.P., ajo, orégano y aceite de oliva.",                              price:"$9" },
+      { name:"Provola & Pepe",      desc:"Tomate San Marzano D.O.P., queso Provola ahumada de Nápoles, pimienta, albahaca y aceite de oliva.",                      price:"$12" },
+      { name:"Bosco Rosso",         desc:"Tomate San Marzano D.O.P., pepperoni, champiñones, quesos (fiordilatte, parmesano), orégano y aceite de oliva.",           price:"$11" },
+      { name:"Jamón & Hongos",      desc:"Tomate San Marzano D.O.P., jamón York, champiñones, quesos fiordilatte y parmesano.",                                     price:"$10" },
+      { name:"Diabola",             desc:"Tomate San Marzano D.O.P., chorizo español, champiñones, cebolla morada, queso fiordilatte y aceite de oliva al peperoncino.", price:"$11" },
+      { name:"Hongos Salvajes",     desc:"Champiñones, tres quesos (fiordilatte, parmesano, gorgonzola), miel de abeja.",                                            price:"$11" },
+      { name:"Fuego & Miel",        desc:"Chorizo español, cebolla morada, quesos fiordilatte y stracciatella, chile flakes, miel de abeja picante, orégano y aceite de oliva.", price:"$12" },
+      { name:"Hongos & Trufa",      desc:"Champiñones, queso fiordilatte, parmesano, albahaca y aceite de trufa blanca.",                                            price:"$12" },
+      { name:"San Gennaro",         desc:"Tomate San Marzano D.O.P., pepperoni, salchicha italiana, quesos fiordilatte y stracciatella, albahaca fresca y aceite de oliva.", price:"$12" },
+      { name:"Dolce Verona",        desc:"Jamón York, quesos (fiordilatte, parmesano, gorgonzola), piña, aceite de oliva y reducción balsámica.",                    price:"$12" },
+      { name:"Cuatro Quesos",       desc:"Fiordilatte, parmesano, gorgonzola, stracciatella y albahaca fresca.",                                                     price:"$12" },
+      { name:"Frosinone & Burrata", desc:"Burrata de Nápoles, tomate San Marzano D.O.P., prosciutto, arúgula, crema balsámica, queso parmesano y aceite de oliva.", price:"$15" },
     ]
   },
   {
@@ -393,41 +495,59 @@ const MENU = [
   },
   {
     id:"cocina", num:9, name:"Nuestra cocina",
-    desc:"Más allá de la pizza: pasta, ensaladas y la mesa italiana.",
+    desc:"Más allá de la pizza: pasta y la mesa italiana.",
     singlePhoto:"assets/catalogo/nuestra_cocina.webp",
     eyebrow:"Elige tu plato",
     variants:[
-      { name:"Spaghetti & Albóndigas", desc:"Spaghetti y dos albóndigas italianas en salsa San Marzano DOP, con pan de la casa.", price:"$10" },
-      { name:"Lasagna de Carne",       desc:"Carne de res, salchicha italiana, tres quesos y salsa San Marzano DOP.",             price:"$10" },
-      { name:"Penne San Marzano",      desc:"Pasta penne con salsa San Marzano DOP, gratinada con fiordilatte y parmesano.",      price:"$10" },
-      { name:"Mediterránea",           desc:"Burrata de Nápoles, prosciutto, arúgula, tomate cherry y balsámico de Módena IGP.",  price:"$14" },
-      { name:"Caprese & Burrata",      desc:"Burrata de Nápoles, tomate, albahaca fresca y balsámico de Módena IGP.",             price:"$9" },
-      { name:"Stracciatella Caprese",  desc:"Stracciatella de Nápoles, tomate cherry confitado, albahaca y pan de la casa.",      price:"$12" },
+      { name:"Stromboli",              desc:"Enrollado de jamón, pepperoni, chile verde, cebolla morada y queso fiordilatte, acompañado de salsa de tomate de la casa.", price:"$8" },
+      { name:"Albóndigas Italianas",   desc:"Dos albóndigas estilo italiano bañadas en su salsa de tomate San Marzano DOP, queso parmesano, albahaca y acompañamos con pan de la casa.", price:"$6" },
+      { name:"Spaghetti & Albóndigas", desc:"Spaghetti y dos albóndigas italianas bañadas en su salsa de tomate San Marzano DOP, queso parmesano, albahaca, y acompañamos con pan de la casa.", price:"$10" },
+      { name:"Lasagna de Carne",       desc:"Rellena de carne de res, salchicha italiana, tres quesos (Ricotta, fiordilatte, parmesano), salsa de tomate San Marzano DOP, acompañamos con pan de la casa.", price:"$10" },
+      { name:"Penne San Marzano",      desc:"Pasta Penne con salsa de tomate San Marzano DOP, gratinado con queso fiordilatte y parmesano. Acompañamos con pan de la casa.", price:"$10" },
     ]
   },
   {
-    id:"gelatos", num:10, name:"Gelatos",
-    desc:"Shakes cremosos y gelato fundido, servido caliente.",
-    singlePhoto:"assets/catalogo/gelateria.webp",
-    eyebrow:"Elige tu gelato",
-    variants:[
-      { name:"Pistacchio Siciliano",       desc:"Shake de gelato intenso con esencia de pistacho siciliano.",                       price:"$6.50" },
-      { name:"Chocolate Italiano",         desc:"Shake de gelato de chocolate intenso, en versión fría para beber.",                price:"$5.75" },
-      { name:"Crema de Avellana",          desc:"Shake de gelato de crema de avellana, cremoso y reconfortante.",                   price:"$5.75" },
-      { name:"Vainilla Clásica",           desc:"La vainilla italiana en su forma más suave y cremosa, en shake.",                  price:"$5.75" },
-      { name:"Pistacchio Cremoso Fundido", desc:"Servido caliente, con galletas waffle, pistacho y avellanas.",                     price:"$5" },
-      { name:"Chocolate Velvet Fundido",   desc:"Servido caliente, con galletas waffle, chocolate y almendras.",                    price:"$4.50" },
+    id:"gelatos", num:10, name:"Hieleras para llevar",
+    desc:"Nuestros sabores artesanales listos para llevar a casa y compartir.",
+    subcats:[
+      {
+        key:"hieleras", label:"Hieleras para llevar",
+        photos:[
+          "assets/catalogo/gelateria.webp",
+          { src:"assets/catalogo/hielera.webp", label:"1 Libra 10$" }
+        ],
+        orderPrefix:"Hielera",
+        variants:[
+          { name:"Pistacchio Siciliano",       desc:"Gelato artesanal intenso con esencia de pistacho siciliano.",                       price:"" },
+          { name:"Chocolate Italiano",         desc:"Gelato artesanal de chocolate intenso, en versión fría para llevar.",               price:"" },
+          { name:"Crema de Avellana",          desc:"Gelato artesanal de crema de avellana, cremoso y reconfortante.",                   price:"" },
+          { name:"Vainilla Clásica",           desc:"La vainilla italiana en su forma más suave y cremosa.",                             price:"" },
+          { name:"Pistacchio Cremoso Fundido", desc:"Gelato artesanal con galletas waffle, pistacho y avellanas.",                      price:"" },
+          { name:"Chocolate Velvet Fundido",   desc:"Gelato artesanal con galletas waffle, chocolate y almendras.",                     price:"" },
+        ]
+      },
+      {
+        key:"tarrinas", label:"Gelatos Tarrinas",
+        singlePhoto:"assets/gelato.webp",
+        eyebrow:"Elige tu tarrina",
+        orderPrefix:"Gelato Tarrina",
+        variants:[
+          { name:"Pistacchio Siciliano", desc:"Auténtico gelato artesanal con pistacho siciliano seleccionado.",    price:"$13 x libra" },
+          { name:"Chocolate Italiano",   desc:"Gelato artesanal de chocolate italiano intenso y cremoso.",          price:"$10" },
+          { name:"Crema de Avellana",    desc:"Gelato artesanal de crema de avellana tostada, suave y cremoso.",    price:"$10" },
+          { name:"Vainilla Clásica",     desc:"Gelato tradicional de vainilla italiana pura, suave y cremosa.",     price:"$10" },
+          { name:"Coco",                 desc:"Gelato artesanal de coco natural, refrescante y sedoso.",            price:"$10" },
+        ]
+      }
     ]
   },
   {
     id:"postres", num:11, name:"Postres",
     desc:"El final dulce de una buena mesa italiana.",
     singlePhoto:"assets/catalogo/postre_lc.webp",
-    eyebrow:"Pide tu variante",
     variants:[
-      { name:"Tiramisú Clásico",  desc:"Mascarpone, café espresso, bizcochos savoiardi y cacao amargo — receta tradicional.", price:"Por confirmar" },
-      { name:"Cannoli Siciliani", desc:"Masa crujiente rellena de ricotta dulce, chips de chocolate y pistacchio.",            price:"Por confirmar" },
-      { name:"Panna Cotta",       desc:"Crema italiana con coulis de frutos rojos y menta fresca.",                           price:"Por confirmar" },
+      { name:"Tiramisú Clásico",  desc:"",                                                                                     price:"Por confirmar" },
+      { name:"Panna Cotta",       desc:"con autentica marmellata di fragole (jalea de fresas)", thumb:"assets/catalogo/pannacotta.webp", price:"Por confirmar" },
     ]
   },
 ];
@@ -481,12 +601,20 @@ function buildPanel(cat){
   if (cat.subcats){
     const subTabs = document.createElement("div");
     subTabs.className = "sub-tabs show";
-    const grid = document.createElement("div");
-    grid.className = "dish-grid";
+    const content = document.createElement("div");
+    content.className = "sub-content";
 
-    function renderGrid(items, label){
-      grid.innerHTML = "";
-      items.forEach(d => grid.appendChild(dishCard(d, label)));
+    function renderSub(sub){
+      content.innerHTML = "";
+      if (sub.items){
+        const grid = document.createElement("div");
+        grid.className = "dish-grid";
+        sub.items.forEach(d => grid.appendChild(dishCard(d, sub.label)));
+        content.appendChild(grid);
+      }
+      if (sub.variants){
+        content.appendChild(buildVariantsPanel(sub));
+      }
     }
 
     cat.subcats.forEach((sub, i) => {
@@ -497,47 +625,17 @@ function buildPanel(cat){
       btn.addEventListener("click", () => {
         subTabs.querySelectorAll("button").forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
-        renderGrid(sub.items, sub.label);
+        renderSub(sub);
       });
       subTabs.appendChild(btn);
     });
 
     panel.appendChild(subTabs);
-    panel.appendChild(grid);
-    renderGrid(cat.subcats[0].items, cat.subcats[0].label);
+    panel.appendChild(content);
+    renderSub(cat.subcats[0]);
 
   } else if (cat.variants){
-    const wrap = document.createElement("div");
-    wrap.className = "variants-wrap";
-
-    const photo = document.createElement("div");
-    photo.className = "variants-photo";
-    photo.innerHTML = `
-      <img src="${cat.singlePhoto}" alt="${cat.name}" loading="lazy"
-           onerror="this.parentElement.style.background='var(--line)';this.remove();">
-      <span class="variants-eyebrow">${cat.eyebrow || "Elige tu variante"}</span>`;
-    wrap.appendChild(photo);
-
-    const list = document.createElement("div");
-    list.className = "variants-list";
-    cat.variants.forEach(v => {
-      const row = document.createElement("div");
-      row.className = "variant-row";
-      row.innerHTML = `
-        <div class="variant-info">
-          <div class="variant-head">
-            <strong>${v.name}</strong>
-            <span class="variant-price">${v.price}</span>
-          </div>
-          <p>${v.desc}</p>
-          ${v.promo ? `<span class="variant-promo">🕐 ${v.promo}</span>` : ""}
-        </div>
-        <button class="order-btn variant-btn" type="button">${WA_ICON} Pedir</button>`;
-      row.querySelector(".variant-btn").addEventListener("click", () => sendOrder(cat.id === "detroit" ? `Detroit ${v.name}` : v.name, v.price));
-      list.appendChild(row);
-    });
-    wrap.appendChild(list);
-    panel.appendChild(wrap);
+    panel.appendChild(buildVariantsPanel(cat));
 
   } else {
     const grid = document.createElement("div");
@@ -547,6 +645,58 @@ function buildPanel(cat){
   }
 
   return panel;
+}
+
+/* Construye el bloque "foto + lista de variantes" (formato Detroit).
+   Reutilizable para categorías con cat.variants o subcats con sub.variants. */
+function buildVariantsPanel(source){
+  const wrap = document.createElement("div");
+  wrap.className = "variants-wrap";
+
+  const photo = document.createElement("div");
+  if (source.photos && source.photos.length > 1) {
+    photo.className = "variants-photo-stack";
+    photo.innerHTML = source.photos.map(p => {
+      const src = typeof p === "string" ? p : p.src;
+      const label = typeof p === "object" && p.label ? `<span class="variants-eyebrow">${p.label}</span>` : "";
+      return `
+        <div class="variants-photo">
+          <img src="${src}" alt="${source.name || source.label}" loading="lazy"
+               onerror="this.parentElement.style.background='var(--line)';this.remove();">
+          ${label}
+        </div>
+      `;
+    }).join("") + (source.eyebrow ? `<span class="variants-eyebrow">${source.eyebrow}</span>` : "");
+  } else {
+    photo.className = "variants-photo";
+    photo.innerHTML = `
+      <img src="${source.singlePhoto || (source.photos && source.photos[0])}" alt="${source.name || source.label}" loading="lazy"
+           onerror="this.parentElement.style.background='var(--line)';this.remove();">
+      ${source.eyebrow ? `<span class="variants-eyebrow">${source.eyebrow}</span>` : ""}`;
+  }
+  wrap.appendChild(photo);
+
+  const list = document.createElement("div");
+  list.className = "variants-list";
+  source.variants.forEach(v => {
+    const row = document.createElement("div");
+    row.className = "variant-row";
+    row.innerHTML = `
+      ${v.thumb ? `<div class="variant-thumb"><img src="${v.thumb}" alt="${v.name}" loading="lazy" onerror="this.remove();"></div>` : ""}
+      <div class="variant-info">
+        <div class="variant-head">
+          <strong>${v.name}</strong>
+          ${v.price ? `<span class="variant-price">${v.price}</span>` : ""}
+        </div>
+        ${v.desc ? `<p>${v.desc}</p>` : ""}
+        ${v.promo ? `<span class="variant-promo">🕐 ${v.promo}</span>` : ""}
+      </div>
+      <button class="order-btn variant-btn" type="button">${WA_ICON} Pedir</button>`;
+    row.querySelector(".variant-btn").addEventListener("click", () => sendOrder(source.orderPrefix ? `${source.orderPrefix} ${v.name}` : v.name, v.price));
+    list.appendChild(row);
+  });
+  wrap.appendChild(list);
+  return wrap;
 }
 
 function activateCategory(id){
