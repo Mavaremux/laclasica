@@ -90,6 +90,7 @@ const historyGalleries = {
     title: "Reconocimientos",
     description: "Una evolución sostenida en 50 Top Pizza y el reconocimiento internacional al trabajo de Juan Cárcamo.",
     items: [
+      ["assets/reconocimientos/50-top-world-2026-25.webp", "50 Top Pizza World 2026 · 25.º lugar · Top Pizzería en El Salvador."],
       ["assets/reconocimientos/50-top-2024-39.webp", "50 Top Pizza Latin America 2024 · 39.º lugar · Top Pizzería en El Salvador."],
       ["assets/reconocimientos/50-top-2025-9.webp", "50 Top Pizza Latin America 2025 · 9.º lugar · Top Pizzería en El Salvador."],
       ["assets/reconocimientos/50-top-2026-5.webp", "50 Top Pizza Latin America 2026 · 5.º lugar · Top Pizzería en El Salvador."],
