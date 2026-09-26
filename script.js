@@ -96,7 +96,8 @@ const historyGalleries = {
       ["assets/reconocimientos/50-top-2026-5.webp", "50 Top Pizza Latin America 2026 · 5.º lugar · Top Pizzería en El Salvador."],
       ["assets/reconocimientos/pizza-maker-2026.webp", "Juan Cárcamo · Pizza Maker of the Year 2026 · Ferrarelle Award."],
       ["assets/reconocimientos/tbc2026milan.webp", "The Best Chef Pizza 2026 · Milán · Juan Cárcamo."],
-      ["assets/reconocimientos/100 juan_carcamo.webp", "The Best Chef Pizza 100 · Juan Cárcamo."]
+      ["assets/reconocimientos/100 juan_carcamo.webp", "The Best Chef Pizza 100 · Juan Cárcamo."],
+      ["assets/juan25.jpg", "Juan Cárcamo · 50 Top Pizza World 2026 · 25.º lugar · San Salvador."]
     ]
   }
 };
