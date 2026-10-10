@@ -675,15 +675,17 @@ body.nav-open .mobile-order{display:none}
 
 /* Accesos rápidos a las tres cartas entregadas por el cliente */
 #carta .carta-accesos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:10px 0 36px;}
-#carta .carta-accesos button{min-width:0;display:flex;align-items:flex-start;flex-direction:column;text-align:left;gap:7px;min-height:147px;padding:21px 20px;border:1px solid #e4d8c4;background:#fffaf1;color:#231a14;cursor:pointer;transition:background .2s,border-color .2s,transform .2s;}
-#carta .carta-accesos button:hover,#carta .carta-accesos button.is-selected{background:#f9ede4;border-color:#b52820;transform:translateY(-2px);}
-#carta .carta-accesos button span{font-size:10px;letter-spacing:.11em;color:#b52820;font-weight:700;}
-#carta .carta-accesos button strong{font:500 clamp(22px,2.5vw,31px)/1.02 'Fraunces',Georgia,serif;}
-#carta .carta-accesos button small{font:500 12px/1.5 'Manrope',sans-serif;color:#74675a;}
+#carta .carta-accesos a,#carta .carta-accesos button{min-width:0;display:flex;align-items:flex-start;flex-direction:column;text-align:left;gap:7px;min-height:154px;padding:21px 20px;border:1px solid #e4d8c4;background:#fffaf1;color:#231a14;cursor:pointer;text-decoration:none;box-shadow:0 2px 6px rgba(35,26,20,0.04);transition:transform .25s ease,box-shadow .25s ease,background .25s ease,border-color .25s ease;}
+#carta .carta-accesos a:hover,#carta .carta-accesos a:focus-visible,#carta .carta-accesos a:active,#carta .carta-accesos button:hover,#carta .carta-accesos button.is-selected{background:#f9ede4;border-color:#b52820;transform:translateY(-2px);box-shadow:0 6px 16px rgba(181,40,32,0.12);outline:none;}
+#carta .carta-accesos a span,#carta .carta-accesos button span{font-size:10px;letter-spacing:.11em;color:#b52820;font-weight:700;}
+#carta .carta-accesos a strong,#carta .carta-accesos button strong{font:500 clamp(22px,2.5vw,31px)/1.02 'Fraunces',Georgia,serif;color:#231a14;}
+#carta .carta-accesos a small,#carta .carta-accesos button small{font:500 12px/1.5 'Manrope',sans-serif;color:#74675a;}
+#carta .carta-accesos .carta-cta{margin-top:auto;padding-top:8px;font-size:11px;font-weight:700;letter-spacing:.04em;color:#b52820;display:inline-flex;align-items:center;gap:4px;transition:transform .2s ease;}
+#carta .carta-accesos a:hover .carta-cta,#carta .carta-accesos a:focus-visible .carta-cta{transform:translateX(2px);}
 #carta .variant-head{justify-content:space-between;}
 #carta .variant-price{flex-shrink:0;white-space:nowrap;font-weight:600;}
 #carta .variant-info p{max-width:65ch;}
-@media(max-width:750px){#carta .carta-accesos{grid-template-columns:1fr;gap:9px;margin-bottom:28px;}#carta .carta-accesos button{min-height:unset;padding:14px 16px;gap:4px;}#carta .carta-accesos button strong{font-size:22px;}}
+@media(max-width:750px){#carta .carta-accesos{grid-template-columns:1fr;gap:9px;margin-bottom:28px;}#carta .carta-accesos a,#carta .carta-accesos button{min-height:unset;padding:14px 16px;gap:4px;}#carta .carta-accesos a strong,#carta .carta-accesos button strong{font-size:22px;}#carta .carta-accesos .carta-cta{padding-top:4px;font-size:11px;}}
 
 #carta .cat-index{max-height:calc(100vh - 100px);overflow-y:auto;scrollbar-width:thin;}
 #carta .sub-tabs{flex-wrap:wrap;}
